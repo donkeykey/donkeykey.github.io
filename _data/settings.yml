@@ -2,19 +2,17 @@
 #-------------------------------
 # General Site Settings
 
-title: Kross
+title: Daichi Kawashima
 logo:
-author: themefisher
-description: this is meta description
-email: steve.fruits@email.com
-phone: +880 2544 658 256
-address: 125/A, CA Commercial Area, California, USA
+author: 
+description: Daichi Kawashimaのポートフォリオサイト
+email: daichi0.0daichi@gmail.com
 copyright: Copyright &copy; 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Getjekyllthemes](https://getjekyllthemes.com)
 
 menu:
   - { name: About, link: "/about" }
-  - { name: Blog, link: "/blog" }
   - { name: Portfolio, link: "/portfolio" }
+  - { name: Blog, link: "/blog" }
   - { name: Contact, link: "/contact" }
 
 #-------------------------------
@@ -36,19 +34,18 @@ disqus-identifier: # Add your shortname for Disqus Comment. For example mr-brown
 # Hero Section
 
 hero:
-  hero-title: Hi! I’m <br> Christoher <br> UX designer
+  hero-title: ""
 
 social:
-  - { icon: "ti-facebook", link: "#" }
-  - { icon: "ti-instagram", link: "#" }
-  - { icon: "ti-dribbble", link: "#" }
-  - { icon: "ti-twitter", link: "#" }
+  - { icon: "ti-facebook", link: "https://www.facebook.com/donkeykey" }
+  - { icon: "ti-instagram", link: "https://www.instagram.com/donkeykey/" }
+  - { icon: "ti-twitter", link: "https://twitter.com/daichi000daichi" }
 
 #-------------------------------
 # About (Section and Page)
 
 # About Section
-blurb: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+blurb: クリエイティブエンジニア Daichi Kawashima のサイトです。<br>This is the portfolio website of Creative Engineer Daichi Kawashima.
 
 blurb-btn-link: "/about"
 blurb-btn-name: know more
@@ -88,10 +85,10 @@ team:
 
 skills-title: Skills
 skills:
-  - { name: Web Design, color: "#fdb157", value: "90%" }
-  - { name: Logo Design, color: "#9473e6", value: "60%" }
-  - { name: After Effects, color: "#bdecf6", value: "80%" }
-  - { name: Web App, color: "#ffbcaa", value: "70%" }
+  - { name: プログラミング<br>Programming, color: "#fdb157", value: "100%" }
+  - { name: プロトタイプデバイスの設計・製造, color: "#9473e6", value: "80%" }
+  - { name: 3Dモデリング<br>3D Modeling, color: "#bdecf6", value: "80%" }
+  - { name: デジタルファブリケーション<br>Digital Fabrication, color: "#ffbcaa", value: "90%" }
 
 #-------------------------------
 # Exprerience Section
@@ -99,22 +96,22 @@ skills:
 experience-title: Experience
 experience:
   - {
-      name: Junior UX Designer,
+      name: サーバーサイド・インフラエンジニア,
       icon: "icon-1.png",
-      date: "Jan 2007 - Feb 2009",
-      organization: "WEBEX",
+      date: "Apr.2014 - Jan.2017",
+      organization: "Yahoo Japan",
     }
   - {
-      name: UX & UI Designer,
+      name: デバイスエンジニア,
       icon: "icon-2.png",
-      date: "Mar 2009 - Aug 2014",
-      organization: "AUGMEDIX",
+      date: "Jan.2017 - Apr.2019",
+      organization: "Birdman.inc",
     }
   - {
-      name: Senior UI Designer,
+      name: クリエイティブエンジニア,
       icon: "icon-3.png",
-      date: "Sep 2014 - Present",
-      organization: "THEMEFISHER",
+      date: "Apr.2019 - Present",
+      organization: "パナソニック FUTURE LIFE FACTORY",
     }
 
 #-------------------------------
@@ -123,49 +120,39 @@ experience:
 education-title: Education
 education:
   - {
-      name: Marters in UX Design,
-      date: "2006",
-      organization: "Masassusets Institute of Technology",
+      name: B.E. - Dept. System Design Engineering,
+      date: "Apr.2008 - Mar.2012",
+      organization: "Keio University B.E. Degree in Engineering"
     }
   - {
-      name: Honours in Fine Arts,
-      date: "2004",
-      organization: "Harvard University",
-    }
-  - {
-      name: Higher Secondary Certificat,
-      date: "2000",
-      organization: "Cardiff School",
-    }
-  - {
-      name: Secondary School Certificate,
-      date: "1998",
-      organization: "Cardiff School",
+      name: Graduate School of Science for Open and Environment Systems,
+      date: "Apr.2012 - Mar.2014",
+      organization: "Keio University Master in Computer Science",
     }
 
 #-------------------------------
 # Services Section
 
-services-title: Services
-services:
-  - {
-      name: UI Design,
-      icon: ti-palette,
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      active: ,# Add true to select section
-    }
-  - {
-      name: UX Design,
-      icon: ti-vector,
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      active: true, # Add true to select section
-    }
-  - {
-      name: Interaction Design,
-      icon: ti-panel,
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      active: ,# Add true to select section
-    }
+#services-title: Services
+#services:
+#  - {
+#      name: UI Design,
+#      icon: ti-palette,
+#      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+#      active: ,# Add true to select section
+#    }
+#  - {
+#      name: UX Design,
+#      icon: ti-vector,
+#      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+#      active: true, # Add true to select section
+#    }
+#  - {
+#      name: Interaction Design,
+#      icon: ti-panel,
+#      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+#      active: ,# Add true to select section
+#    }
 
 #-------------------------------
 # Portfolio (Section and Page)
@@ -300,4 +287,6 @@ client-slider-items:
 # Contact Section
 
 contact-title: Contact Info
-contact-email: steve.fruits@email.com
+contact-email: daichi0.0daichi@gmail.com
+
+formspree-id: xdovokzj

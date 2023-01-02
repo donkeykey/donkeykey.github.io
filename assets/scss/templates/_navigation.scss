@@ -4,8 +4,8 @@
   &.nav-bg {
     background-color: $primary-color;
     padding: 15px 100px;
-    @include desktop {
-      padding: 15px 20px;
+    @include tablet{
+      padding: 1px 10px;
     }
   }
   @include desktop {
