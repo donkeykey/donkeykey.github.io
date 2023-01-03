@@ -3,17 +3,18 @@
 # General Site Settings
 
 title: Daichi Kawashima
-logo:
-author: 
+logo: 
+author: Daichi Kawashima
 description: Daichi Kawashimaのポートフォリオサイト
 email: daichi0.0daichi@gmail.com
-copyright: Copyright &copy; 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Getjekyllthemes](https://getjekyllthemes.com)
+copyright: Copyright &copy; 2023 Daichi Kawashima
 
 menu:
   - { name: About, link: "/about" }
   - { name: Portfolio, link: "/portfolio" }
   - { name: Blog, link: "/blog" }
   - { name: Contact, link: "/contact" }
+
 
 #-------------------------------
 # Google Analytics Section
@@ -34,7 +35,7 @@ disqus-identifier: # Add your shortname for Disqus Comment. For example mr-brown
 # Hero Section
 
 hero:
-  hero-title: ""
+  hero-title: "Hello, world!"
 
 social:
   - { icon: "ti-facebook", link: "https://www.facebook.com/donkeykey" }
@@ -120,39 +121,39 @@ experience:
 education-title: Education
 education:
   - {
-      name: B.E. - Dept. System Design Engineering,
+      name: 理工学部システムデザイン工学科,
       date: "Apr.2008 - Mar.2012",
-      organization: "Keio University B.E. Degree in Engineering"
+      organization: "慶應義塾大学"
     }
   - {
-      name: Graduate School of Science for Open and Environment Systems,
+      name: 開放環境科学専攻 コンピュータサイエンス専修,
       date: "Apr.2012 - Mar.2014",
-      organization: "Keio University Master in Computer Science",
+      organization: "慶應義塾大学大学院",
     }
 
 #-------------------------------
 # Services Section
 
-#services-title: Services
-#services:
-#  - {
-#      name: UI Design,
-#      icon: ti-palette,
-#      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-#      active: ,# Add true to select section
-#    }
-#  - {
-#      name: UX Design,
-#      icon: ti-vector,
-#      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-#      active: true, # Add true to select section
-#    }
-#  - {
-#      name: Interaction Design,
-#      icon: ti-panel,
-#      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-#      active: ,# Add true to select section
-#    }
+services-title: Services
+services:
+  - {
+      name: UI Design,
+      icon: ti-palette,
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      active: ,# Add true to select section
+    }
+  - {
+      name: UX Design,
+      icon: ti-vector,
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      active: true, # Add true to select section
+    }
+  - {
+      name: Interaction Design,
+      icon: ti-panel,
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      active: ,# Add true to select section
+    }
 
 #-------------------------------
 # Portfolio (Section and Page)
@@ -176,9 +177,10 @@ portfolio-home-items:
 
 # Portfolio Page
 portfolio-label:
-  - { title: "UI/UX Design", type: "design" }
-  - { title: "BRANDING", type: "branding" }
-  - { title: "ILLUSTRATION", type: "illustration" }
+  - { title: "Hardware/Gadget", type: "hardware" }
+  - { title: "AI", type: "AI" }
+  - { title: "Web", type: "web" }
+  - { title: "App", type: "apps" }
 
 portfolio-items:
   - image: "assets/images/portfolio/item-1.png"

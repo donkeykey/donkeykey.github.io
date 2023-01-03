@@ -1,10 +1,12 @@
 ---
-layout: post
-title:  Amazon increase income 1.5 Million
-date:   2017-05-26 14:05:55 +0300
-image:  /assets/images/blog/post-2.jpg
-author: uixgeek
-tags:   UX design
+type:       [web]
+permalink:  /portfolio/fukase-no-owari
+layout:     portfolio
+title:      フカセ暗号ジェネレーター
+date:       2022-11-01 22:05:55 +0300
+image:      /assets/images/portfolio/fukase-no-owari.png
+icon-image: /assets/images/portfolio/fukase-no-owari.png
+author:     Daichi Kawashima
 ---
 
 **Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.**

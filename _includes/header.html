@@ -4,7 +4,7 @@
       {% if site.data.settings.logo %}
         <img src="{{ site.data.settings.logo | absolute_url }}" alt="{{ site.data.settings.title }}">
         {% else if %}
-        <h4 class="text-white font-tertiary">{{site.data.settings.title}}</h3>
+        <div class="site-title text-white font-tertiary">{{site.data.settings.title}}</div>
       {% endif %}
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"

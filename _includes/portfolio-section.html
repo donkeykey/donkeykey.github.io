@@ -4,23 +4,26 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <h2 class="section-title">Portfolio</h2>
+        <h3 class="section-title">Portfolio</h3>
       </div>
     </div>
     <div class="row shuffle-wrapper">
-      {% for item in site.data.settings.portfolio-home-items %}
-      <div class="col-lg-4 col-6 mb-4 shuffle-item">
+    {% for post in site.posts %}
+    {% if post.layout == "portfolio" %}
+      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[{% for p in post.type %}{% if forloop.first == true %}{% else %},{% endif %}&quot;{{ p }}&quot;{% endfor %}]">
         <div class="position-relative rounded hover-wrapper">
-          <img src="{{ site.baseurl }}/{{ item.image }}" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
+          <img src="{{ post.icon-image }}" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
           <div class="hover-overlay">
             <div class="hover-content">
-              <a class="btn btn-light btn-sm" href="{{ item.url }}">view project</a>
+              <a class="btn btn-light btn-sm" href="{{ post.permalink }}">view project</a>
             </div>
           </div>
         </div>
       </div>
-      {% endfor %}
+    {% endif %}
+    {% endfor %}
     </div>
+
   </div>
 </section>
 <!-- /portfolio -->

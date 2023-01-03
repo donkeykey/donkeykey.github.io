@@ -20,7 +20,23 @@ title: Portfolio
       </div>
     </div>
     <div class="row shuffle-wrapper">
-      {% for item in site.data.settings.portfolio-items %}
+    {% for post in site.posts %}
+    {% if post.layout == "portfolio" %}
+      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[{% for p in post.type %}{% if forloop.first == true %}{% else %},{% endif %}&quot;{{ p }}&quot;{% endfor %}]">
+        <div class="position-relative rounded hover-wrapper">
+          <img src="{{ post.icon-image }}" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
+          <div class="hover-overlay">
+            <div class="hover-content">
+              <a class="btn btn-light btn-sm" href="{{ post.permalink }}">view project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    {% endfor %}
+    </div>
+      <!--
+    <div class="row shuffle-wrapper">
       <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[{% for portfolio in item.portfolio-type %}{% if forloop.first == true %}{% else %},{% endif %}&quot;{{ portfolio.type }}&quot;{% endfor %}]">
         <div class="position-relative rounded hover-wrapper">
           <img src="{{ site.baseurl }}/{{ item.image }}" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
@@ -31,13 +47,14 @@ title: Portfolio
           </div>
         </div>
       </div>
-      {% endfor %}
     </div>
+-->
   </div>
 </section>
 <!-- /portfolio -->
 
 <!-- clients -->
+<!--
 <section class="section bg-light">
   <div class="container">
     <div class="row">
@@ -48,4 +65,5 @@ title: Portfolio
     {% include client-slider.html %}
   </div>
 </section>
+-->
 <!-- /clients -->

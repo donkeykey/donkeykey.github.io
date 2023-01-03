@@ -7,7 +7,9 @@ title: Blogs
   <div class="container">
     <div class="row">
       {% for post in site.posts %}
+      {% if post.layout == "post" %}
       {% include post.html %}
+      {% endif %}
       {% endfor %}
     </div>
   </div>
@@ -15,6 +17,7 @@ title: Blogs
 <!-- /blog -->
 
 <!-- clients -->
+<!--
 <section class="section bg-light">
   <div class="container">
     <div class="row">
@@ -25,4 +28,5 @@ title: Blogs
     {% include client-slider.html %}
   </div>
 </section>
+-->
 <!-- /clients -->

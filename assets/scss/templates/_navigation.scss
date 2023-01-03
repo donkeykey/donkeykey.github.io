@@ -1,11 +1,21 @@
+.site-title{
+  font-size:22px;
+  font-weight: bold;
+}
+
+.navbar-brand{
+  padding:0;
+  margin:0;
+}
+
 .navigation{
   padding: 40px 130px;
   transition: .3s ease;
   &.nav-bg {
     background-color: $primary-color;
-    padding: 15px 100px;
-    @include tablet{
-      padding: 1px 10px;
+    padding: 1px 100px;
+    @include desktop {
+      padding: 1px 20px;
     }
   }
   @include desktop {
