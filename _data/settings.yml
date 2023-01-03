@@ -35,7 +35,7 @@ disqus-identifier: # Add your shortname for Disqus Comment. For example mr-brown
 # Hero Section
 
 hero:
-  hero-title: "Hello, world!"
+  hero-title: "Daichi Kawashima"
 
 social:
   - { icon: "ti-facebook", link: "https://www.facebook.com/donkeykey" }
@@ -46,8 +46,6 @@ social:
 # About (Section and Page)
 
 # About Section
-blurb: クリエイティブエンジニア Daichi Kawashima のサイトです。<br>This is the portfolio website of Creative Engineer Daichi Kawashima.
-
 blurb-btn-link: "/about"
 blurb-btn-name: know more
 

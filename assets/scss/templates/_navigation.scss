@@ -9,7 +9,7 @@
 }
 
 .navigation{
-  padding: 40px 130px;
+  padding: 20px 130px;
   transition: .3s ease;
   &.nav-bg {
     background-color: $primary-color;
@@ -20,7 +20,7 @@
   }
   @include desktop {
     padding: 20px;
-    background: $primary-color;
+    /*background: $primary-color;*/
   }
 }
 
