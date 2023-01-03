@@ -1,6 +1,5 @@
 ---
-type:   blog
-layout: post
+layout: -post
 title:  はじめまして！
 date:   2023-01-02 22:07:55 +0900
 image:  /assets/images/blog/post-5.jpg

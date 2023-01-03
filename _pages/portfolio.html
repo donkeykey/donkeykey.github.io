@@ -22,7 +22,7 @@ title: Portfolio
     <div class="row shuffle-wrapper">
     {% for post in site.posts %}
     {% if post.layout == "portfolio" %}
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[{% for p in post.type %}{% if forloop.first == true %}{% else %},{% endif %}&quot;{{ p }}&quot;{% endfor %}]">
+      <div class="col-12 col-sm-6 col-lg-4 mb-4 shuffle-item" data-groups="[{% for p in post.type %}{% if forloop.first == true %}{% else %},{% endif %}&quot;{{ p }}&quot;{% endfor %}]">
         <div class="position-relative rounded hover-wrapper">
           <img src="{{ post.icon-image }}" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
           <div class="hover-overlay">
