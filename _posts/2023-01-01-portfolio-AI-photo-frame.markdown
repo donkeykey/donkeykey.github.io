@@ -1,6 +1,6 @@
 ---
 type:   [hardware,AI]
-permalink: /portfolio/ai-photo-frame
+permalink: /portfolio/ai-art-frame
 layout: portfolio
 title:  AI描画アートフレーム
 date:   2023-01-01 22:05:55 +0300
