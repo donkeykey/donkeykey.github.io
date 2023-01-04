@@ -15,7 +15,7 @@
   <meta property="og:description" content="{{ page.description }}">
   <meta property="og:type" content="article">
   {% endif %}
-  <meta property="og:image" content="{% if page.image %}{{ site.baseurl }}/{{ page.image }}{% else %}/{{ site.data.settings.main_image }}{% endif %}">
+  <meta property="og:image" content="{{ site.url }}{% if page.image %}{{ site.baseurl }}/{{ page.image }}{% else %}/{{ site.data.settings.main_image }}{% endif %}">
   <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}"> 
   <meta property="og:site_name" content="{{ site.data.settings.title }}">
 
