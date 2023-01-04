@@ -7,13 +7,14 @@ date:       2015-08-10 22:05:55 +0300
 image:      /assets/images/portfolio/fukase-no-owari.png
 icon-image: /assets/images/portfolio/fukase-no-owari.png
 author:     Daichi Kawashima
+description: SEKAI NO OWARIのボーカル、深瀬氏がtwitterで公開し話題になった暗号文をもとに、ユーザーが自由に暗号を生成しSNSに投稿できるコンテンツ
 ---
 
 <p><h5 style="text-align:center;">ウェブサイト：<a href="http://fukase-no-owari.net/" target="_blank">フカセ暗号ジェネレーター</a></h5></p>
 
 
 #### WHAT <span style="font-size:18px;">何を作ったのか</span>
-SEKAI NO OWARIのボーカル、深瀬氏がtwitterで公開し話題になった暗号文をもとに、ユーザーが自由に暗号を生成しSNSに投稿できるコンテンツ
+{{ page.description }}
 
 #### WHY <span style="font-size:18px;">なぜ作ったのか</span>
 「これ作ったらバズるんじゃね？」という友人の発案から。

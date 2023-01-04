@@ -7,12 +7,13 @@ date:       2022-11-01 22:05:55 +0300
 image:      /assets/images/portfolio/ano-pictogram.png
 icon-image: /assets/images/portfolio/ano-pictogram.png
 author:     Daichi Kawashima
+description: 2020年東京オリンピックで注目された"あの"ピクトグラムを体験できるWebサイト
 ---
 
 <p><h5 style="text-align:center;">ウェブサイト：<a href="https://donkeykey.github.io/Ano_Pictogram/" target="_blank">あのピクトグラム</a></h5></p>
 
 #### WHAT <span style="font-size:18px;">何を作ったのか</span>
-2020年東京オリンピックで注目された"あの"ピクトグラムを体験できるWebサイト
+{{ page.description }}
 
 #### WHY <span style="font-size:18px;">なぜ作ったのか</span>
 「これ作ったらバズるんじゃね？」という私の発案。結果バズらず。

@@ -7,10 +7,11 @@ date:       2018-10-31 22:05:55 +0300
 image:      /assets/images/portfolio/oppiroge.jpg
 icon-image: /assets/images/portfolio/oppiroge.jpg
 author:     Daichi Kawashima
+description: ゴミの大きさを判別して、エッチな声が鳴る♪そんなに広げちゃダメだよと言われる度に、広げたくなっちゃうのはどうして… 渋谷のゴミ問題を解決するため、ハロウィンエコ企画第三弾として制作しました。
 ---
 
 #### WHAT <span style="font-size:18px;">何を作ったのか</span>
-ゴミの大きさを判別して、エッチな声が鳴る♪そんなに広げちゃダメだよと言われる度に、広げたくなっちゃうのはどうして… 渋谷のゴミ問題を解決するため、ハロウィンエコ企画第三弾として制作しました。
+{{ page.description }}
 
 #### WHY <span style="font-size:18px;">なぜ作ったのか</span>
 渋谷ハロウィンのゴミ問題をエロの力で解決するプロジェクト「ドエコ」のプロモーション企画。

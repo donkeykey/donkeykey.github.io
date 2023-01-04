@@ -7,10 +7,11 @@ date:   2023-01-01 22:05:55 +0300
 icon-image:  /assets/images/portfolio/ai-photo-frame.jpg
 image:  /assets/images/portfolio/ai-photo-frame.jpg
 author: Daichi Kawashima
+description: ３時間に１回、AIが自動で電子ペーパーにランダムなアートを描画するフォトフレーム。
 ---
 
 #### WHAT <span style="font-size:18px;">何を作ったのか</span>
-３時間に１回、AIが自動で電子ペーパーにランダムなアートを描画するフォトフレーム。
+{{ page.description }}
 
 #### WHY <span style="font-size:18px;">なぜ作ったのか</span>
 個人の想像や選択を超えて、無尽蔵でセレンディピティなアートとの一期一会を誰でも気軽に楽しんでもらいたい。

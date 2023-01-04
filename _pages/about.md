@@ -3,6 +3,7 @@ layout: about
 title: About Me
 author: 川島 大地<br>Daichi Kawashima
 image: assets/images/about/main.jpg
+description: About 川島大地
 ---
 
 2014年にヤフージャパンのインフラエンジニアとして大手インターネット会社に入社、画像配信サーバーの開発・保守・運用に従事。
