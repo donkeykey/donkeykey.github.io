@@ -581,7 +581,7 @@ body {
     background: rgba(33, 38, 45, 0.8); /* Semi-transparent */
     backdrop-filter: blur(5px);
     border-radius: var(--border-radius);
-    overflow: hidden;
+    /*overflow: hidden;*/
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
     position: relative;
