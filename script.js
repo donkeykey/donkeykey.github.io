@@ -463,11 +463,13 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Handle direct project URLs - improved version
     function handleDirectProjectAccess() {
         const path = window.location.pathname;
+        console.log('Checking direct access for path:', path);
         const projectMatch = path.match(/^\/projects\/(.+)$/);
         const portfolioMatch = path.match(/^\/portfolio\/(.+)$/);
         
         if (portfolioMatch) {
             const projectId = portfolioMatch[1];
+            console.log('Redirecting portfolio URL to projects:', projectId);
             // Immediate redirect to new URL
             window.location.replace(`/projects/${projectId}`);
             return;
@@ -475,24 +477,26 @@ document.addEventListener('DOMContentLoaded', async function() {
         
         if (projectMatch) {
             const projectId = projectMatch[1];
+            console.log('Found project URL, projectId:', projectId);
             
-            // Function to check and show modal
+            // Function to check and show modal with max retry limit
+            let retryCount = 0;
+            const maxRetries = 50; // 5 seconds max wait
             const tryShowModal = () => {
+                console.log(`Trying to show modal for ${projectId}, attempt ${retryCount + 1}`);
                 if (projectsData[projectId]) {
+                    console.log('Project data found, showing modal');
                     showProjectModal(projectId);
-                } else {
-                    // Retry after a short delay if data not loaded yet
+                } else if (retryCount < maxRetries) {
+                    retryCount++;
                     setTimeout(tryShowModal, 100);
+                } else {
+                    console.error('Failed to load project data after maximum retries');
                 }
             };
             
-            // Wait for data to load then show modal
-            if (Object.keys(projectsData).length > 0) {
-                tryShowModal();
-            } else {
-                // Wait longer if no data loaded yet
-                setTimeout(tryShowModal, 500);
-            }
+            // Start trying to show modal
+            tryShowModal();
         }
     }
     
