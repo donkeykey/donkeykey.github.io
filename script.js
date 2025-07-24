@@ -286,7 +286,7 @@ let projectsData = {};
 // Load project data
 async function loadProjectData() {
     try {
-        const response = await fetch('projects.json');
+        const response = await fetch('/projects.json');
         projectsData = await response.json();
         return projectsData;
     } catch (error) {
@@ -297,8 +297,14 @@ async function loadProjectData() {
 
 // Show project modal
 function showProjectModal(projectId) {
+    console.log('Attempting to show modal for:', projectId);
+    console.log('Available projects:', Object.keys(projectsData));
     const project = projectsData[projectId];
-    if (!project) return;
+    if (!project) {
+        console.error('Project not found:', projectId);
+        return;
+    }
+    console.log('Project found:', project);
     
     // Create modal HTML
     const modalHTML = `
@@ -313,7 +319,7 @@ function showProjectModal(projectId) {
                     </div>
                     ${project.images.length > 0 ? `
                         <div class="modal-image">
-                            <img src="/${project.images[0]}" alt="${project.title}" loading="lazy">
+                            <img src="${project.images[0]}" alt="${project.title}" loading="lazy">
                         </div>
                     ` : ''}
                     <div class="modal-body">
@@ -401,6 +407,7 @@ window.addEventListener('popstate', function(e) {
 document.addEventListener('DOMContentLoaded', async function() {
     // Load project data
     await loadProjectData();
+    console.log('Project data loaded:', Object.keys(projectsData).length, 'projects');
     
     // Project filtering functionality
     const filterButtons = document.querySelectorAll('.filter-btn');
@@ -432,8 +439,11 @@ document.addEventListener('DOMContentLoaded', async function() {
         card.addEventListener('click', function(e) {
             e.preventDefault();
             const projectId = this.getAttribute('data-project');
+            console.log('Card clicked, projectId:', projectId);
             if (projectId) {
                 showProjectModal(projectId);
+            } else {
+                console.error('No projectId found on card');
             }
         });
         
