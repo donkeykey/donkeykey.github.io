@@ -1,9 +1,616 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>川島大地 | プロトタイプエンジニア</title>
+    <meta name="description" content="川島大地（Daichi Kawashima）のポートフォリオサイト。パナソニック FUTURE LIFE FACTORY所属のクリエイティブエンジニア・プロトタイプエンジニア。">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script>
+        // GitHub Pages redirect handling for direct URLs
+        (function() {
+            var redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
+            if (redirect && redirect != location.href) {
+                history.replaceState(null, null, redirect);
+            }
+        })();
+    </script>
+</head>
+<body>
+    <div id="particles-bg"></div>
+    
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <span class="terminal-cursor">$</span> kawashima
+            </div>
+            <div class="nav-menu">
+                <a href="#about" class="nav-link">Profile</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Tech Stack</a>
+                <a href="#contacts" class="nav-link">Contacts</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
 
-{% include hero-section.html %}
+    <main class="main">
+        <section class="hero section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="typing-text line1">Daichi Kawashima</span>
+                    </h1>
+                    <p class="hero-subtitle">クリエイティブエンジニア / プロトタイプエンジニア</p>
+                    <p class="hero-description">
+                        テクノロジーと創造性を横断し、アイディアをカタチにする。<br>
+                    </p>
+                    <div class="hero-links">
+                        <a href="#projects" class="btn-primary">Projects</a>
+                        <a href="#contacts" class="btn-secondary">Contacts</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-{% include portfolio-section.html %}
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Profile</h2>
+                </div>
+                
+                <div class="about-content">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>基本情報</h3>
+                            <p><strong>名前:</strong> 川島 大地（Daichi Kawashima）</p>
+                            <p><strong>所属:</strong> パナソニック FUTURE LIFE FACTORY</p>
+                            <p><strong>肩書:</strong> クリエイティブエンジニア / プロトタイプエンジニア</p>
+                            <div class="external-links">
+                                <a href="https://kawashimadaichi.tokyo" target="_blank">ポートフォリオ →</a>
+                                <a href="https://manomono.net" target="_blank">個人事業「MANO MONO」 →</a>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3>概要</h3>
+                            <p>テクノロジーと創造性を横断する<strong>クリエイティブエンジニア</strong>。エンジニアとしてのバックグラウンドを活かし、テクノロジーとクリエイティブの領域を行ったり来たりしながら、アイディアをカタチにし、検証できるレベルでプロトタイピングしていくことを専門としている。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="career-timeline">
+                        <h3>経歴</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-year">2019年〜</div>
+                                <div class="timeline-content">
+                                    <h4>パナソニック株式会社 FUTURE LIFE FACTORY</h4>
+                                    <p>クリエイティブエンジニア / Creative Engineer</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">2017年〜2019年</div>
+                                <div class="timeline-content">
+                                    <h4>株式会社バードマン</h4>
+                                    <p>クリエイティブエンジニア / Creative Engineer</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">2014年〜2017年</div>
+                                <div class="timeline-content">
+                                    <h4>ヤフー株式会社</h4>
+                                    <p>サーバエンジニア / Server Engineer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="awards-timeline">
+                        <h3>主な受賞歴</h3>
+                        <div class="awards-list">
+                            <!-- <div class="award-item">
+                                <div class="award-year">2025</div>
+                                <div class="award-content">
+                                    <h4>Red Dot Award: Design Concept 2025</h4>
+                                    <p>HYKE‑575</p>
+                                </div>
+                            </div> -->
+                            <div class="award-item">
+                                <div class="award-year">2022</div>
+                                <div class="award-content">
+                                    <h4>Red Dot Award: Design Concept 2022</h4>
+                                    <p>KOTOBATABI</p>
+                                </div>
+                            </div>
+                            <div class="award-item">
+                                <div class="award-year">2020</div>
+                                <div class="award-content">
+                                    <h4>iF DESIGN AWARD 2020 GOLD</h4>
+                                    <p>PA!GO</p>
+                                </div>
+                            </div>
+                            <div class="award-item">
+                                <div class="award-year">2020</div>
+                                <div class="award-content">
+                                    <h4>CANNES LIONS 2020 SHORTLIST</h4>
+                                    <p>PA!GO - INNOVATION LIONS</p>
+                                </div>
+                            </div>
+                            <div class="award-item">
+                                <div class="award-year">2019</div>
+                                <div class="award-content">
+                                    <h4>THE FWA 2019 FWA OF THE DAY</h4>
+                                    <p>PA!GO</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-{% include blog-section.html %}
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Projects</h2>
+                </div>
+                
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="設計・開発">設計・開発</button>
+                    <button class="filter-btn" data-filter="テクニカルディレクション">テクニカルディレクション</button>
+                    <button class="filter-btn" data-filter="個人事業">個人事業</button>
+                    <button class="filter-btn" data-filter="個人制作">個人制作</button>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card" data-project="pago" data-category="設計・開発">
+                        <div class="project-image">
+                            <img src="assets/images/projects/pago.jpg" alt="PA!GO" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4>PA!GO</h4>
+                                <span class="project-tag">設計・開発</span>
+                            </div>
+                            <div class="awards">
+                                <span class="award">iF DESIGN AWARD 2020 GOLD</span>
+                                <span class="award">CANNES LIONS 2020 SHORTLIST</span>
+                                <span class="award">THE FWA 2019 FWA OF THE DAY</span>
+                            </div>
+                            <p>Googleとの共同開発による知育デバイス。子どもが外の世界で出会った花、動物、虫などを内蔵カメラで撮影すると、Googleの機械学習技術（TensorFlow、Edge TPU）によりAIがそれらが何かを音声で教えてくれる。スマホやゲーム機の代わりに子どもが野外で過ごす時間を増やし、「探索する」「遊ぶ」「学習する」意欲を育むことを目的とする。</p>
+                            <div class="project-links">
+                                <a href="https://panasonic.co.jp/design/flf/works/pago/" target="_blank">Project Page</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="hyke-575" data-category="設計・開発">
+                        <div class="project-image">
+                            <img src="assets/images/projects/hyke-575.jpg" alt="HYKE-575" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4>HYKE‑575</h4>
+                                <span class="project-tag">設計・開発</span>
+                            </div>
+                            <!--<div class="awards">
+                                <span class="award">Red Dot Award: Design Concept 2025</span>
+                            </div>-->
+                            <p>風景を俳句に変換するAIカメラ。撮影した風景とGPS情報、天気データを元にGPT-4oが俳句を生成し、内蔵プリンターで即座に印刷。松尾芭蕉や小林一茶など歴史的俳人のスタイルを選択可能で、テクノロジーと伝統文化の融合で新しい感性の刺激をもたらす。</p>
+                            <div class="project-links">
+                                <a href="https://panasonic.co.jp/design/flf/works/HYKE-575/" target="_blank">Project Page</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="remix" data-category="設計・開発">
+                        <div class="project-image">
+                            <img src="assets/images/projects/remix.jpg" alt="リミックス" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4>リミックス</h4>
+                                <span class="project-tag">設計・開発</span>
+                            </div>
+                            <p>レトロ家電ハックプロジェクト。1962年発売のパナソニック製キャビネット家具調ステレオ（スーパーフォニックステレオHE-3000）を現代のテクノロジーでアップデート。レコード針のかわりにカラーセンサーを搭載し、レコード盤状のシートに描かれた絵を音に変えて音楽を奏でる楽器に生まれ変わらせた。色に音階を割り当て思い通りのメロディを奏でることも、自由な絵で予想不可能な音楽を奏でることも可能。過去の作り手との対話を通じて、デジタルとフィジカルの交差する未来への問いを形にしたプロジェクト。</p>
+                            <div class="project-links">
+                                <a href="https://panasonic.co.jp/design/flf/works/remix/" target="_blank">Project Page</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="kotoyamahyakkei" data-category="テクニカルディレクション">
+                        <div class="project-image">
+                            <img src="assets/images/projects/kotoyamahyakkei.jpg" alt="言山百景" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4>言山百景</h4>
+                                <span class="project-tag">テクニカルディレクション</span>
+                            </div>
+                            <p>人と地域の新たな関わり方による地域活性プロジェクト。リモート観光やオンラインイベントの普及により希薄化していく「人と地域との関係性」をつなぎ変える新たな魅力の引き出し方を提案。スマートフォンで発した言葉が遠く離れた土地に"物理的に"舞い降りるオブジェとなり、その地域に新しい魅力や文化を生み出すネットワーク連動型インスタレーション。</p>
+                            <div class="project-links">
+                                <a href="https://panasonic.co.jp/design/flf/works/kotoyamahyakkei/" target="_blank">Project Page</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="tariki" data-category="テクニカルディレクション">
+                        <div class="project-image">
+                            <img src="assets/images/projects/tariki.png" alt="他力研究所" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4>他力研究所</h4>
+                                <span class="project-tag">テクニカルディレクション</span>
+                            </div>
+                            <p>目に見えない神秘的な力（他力）の計測・採取を行い、その活用方法を探求する研究所チーム。従来の産業において誤差や障害と見なされ排除されてきた自然の不確定要素を、共に活かすべき存在として捉え直し、「揺らぎ」や「偶然」と手を取り合って未来の産業のあり方を再構築することを目的とする実験的研究。</p>
+                            <div class="project-links">
+                                <a href="https://tariki-lab.panasonic.com/" target="_blank">Project Page</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="epytotorp" data-category="テクニカルディレクション">
+                        <div class="project-image">
+                            <img src="assets/images/projects/epytotorp.png" alt="EPYTOTORP" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4>EPYTOTORP</h4>
+                                <span class="project-tag">テクニカルディレクション</span>
+                            </div>
+                            <p>ユーザーとメーカーが一緒にプロトタイプ（完成前の試作品）をブラッシュアップするコミュニティプラットフォーム。プロトタイプ名は「PROTOTYPE」を逆から読んだもの。ソフトウェア開発のオープンソースコミュニティの考えを応用し、消費者自身がContributor（貢献者）としてものづくりに参加・貢献することで、より素晴らしいプロダクトに磨かれる新しい製品開発手法を提案。</p>
+                            <div class="project-links">
+                                <a href="https://epytotorp.panasonic.co.jp/" target="_blank">Project Page</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="doing_io" data-category="テクニカルディレクション">
+                        <div class="project-image">
+                            <img src="assets/images/projects/doing_io.jpg" alt="D+IO" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4>D+IO</h4>
+                                <span class="project-tag">テクニカルディレクション</span>
+                            </div>
+                            <p>人間が本来備え持っている創造力をエンパワーし、「大切な誰かへ届けたいみんなのモノづくり」を応援するプロジェクト。これまでの「DIY = Do It Yourself」から「Do It Ourselves」へ発想を転換。市販の電子部品や身の回りの素材を使ったプロダクトの作り方をGitHubで公開し、ユーザー間でソースコードをカスタマイズしたりアップデートを提案し合ったりできる仕組みを提供。</p>
+                            <div class="project-links">
+                                <a href="https://panasonic.co.jp/design/flf/works/doing_io/" target="_blank">Project Page</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="kotobatabi" data-category="テクニカルディレクション">
+                        <div class="project-image">
+                            <img src="assets/images/projects/kotobatabi.jpg" alt="KOTOBATABI" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4>KOTOBATABI</h4>
+                                <span class="project-tag">テクニカルディレクション</span>
+                            </div>
+                            <div class="awards">
+                                <span class="award">Red Dot Award: Design Concept 2022</span>
+                            </div>
+                            <p>みんなの言葉が雲になり、偶発的な発見を誘発するインタラクティブツール。音声認識により発話した言葉がテキスト化され、現実と紐付いたデジタル空間に「言葉雲」として舞い上がるARアプリケーション。スマホやARグラスを通じて他のユーザーの言葉雲を見ることができ、GPS内蔵の専用音声入力デバイスでは言葉雲がある場所で光ってお知らせ。言葉雲が集まっている場所を発見して新たな出会いや発見を求める「ちょっとした旅」を誘発する体験を提供する。</p>
+                            <div class="project-links">
+                                <a href="https://panasonic.co.jp/design/flf/works/kotobatabi/" target="_blank">Project Page</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="trendgpt" data-category="個人事業">
+                        <div class="project-image">
+                            <img src="assets/images/projects/trendgpt.png" alt="TrendGPT" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4>TrendGPT</h4>
+                                <span class="project-tag">個人事業</span>
+                            </div>
+                            <p>特定カテゴリに関するAIがニュースを要約・配信するサービス</p>
+                            <div class="project-links">
+                                <a href="https://trendgpt.manomono.net" target="_blank">Visit Site</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="chameleon-news" data-category="個人事業">
+                        <div class="project-image">
+                            <img src="assets/images/projects/chameleon-news.png" alt="Chameleon News" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4>Chameleon News</h4>
+                                <span class="project-tag">個人事業</span>
+                            </div>
+                            <p>CM動画のトレンドを配信するAIメディア</p>
+                            <div class="project-links">
+                                <a href="https://www.chameleon.news" target="_blank">Visit Site</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="golf-system" data-category="個人事業">
+                        <div class="project-image">
+                            <div class="placeholder-image">⚙️</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4>ゴルフ場打席時間管理システム</h4>
+                                <span class="project-tag">個人事業</span>
+                            </div>
+                            <p>AWSを用いたWebベースの管理システム</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="ai-art-frame" data-category="個人制作">
+                        <div class="project-image">
+                            <img src="assets/images/projects/ai-art-frame.jpg" alt="AI ART FRAME" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4>AI ART FRAME</h4>
+                                <span class="project-tag">個人制作</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="ano-pictogram" data-category="個人制作">
+                        <div class="project-image">
+                            <img src="assets/images/projects/ano-pictogram.png" alt="ANO PICTOGRAM" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4>ANO PICTOGRAM</h4>
+                                <span class="project-tag">個人制作</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://kawashimadaichi.tokyo/portfolio/ano-pictogram" target="_blank">Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="oppiroge-tongs" data-category="個人制作">
+                        <div class="project-image">
+                            <img src="assets/images/projects/oppiroge-tongs.jpg" alt="OPPIROGE TONGS" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4>OPPIROGE TONGS</h4>
+                                <span class="project-tag">個人制作</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://kawashimadaichi.tokyo/portfolio/oppiroge-tongs" target="_blank">Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="bokkin-bako" data-category="個人制作">
+                        <div class="project-image">
+                            <img src="assets/images/projects/bokkin-bako.jpg" alt="BOKKIN BAKO" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4>BOKKIN BAKO</h4>
+                                <span class="project-tag">個人制作</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://kawashimadaichi.tokyo/portfolio/bokkin-bako" target="_blank">Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="fukase-no-owari" data-category="個人制作">
+                        <div class="project-image">
+                            <img src="assets/images/projects/fukase-no-owari.png" alt="FUKASE NO OWARI" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4>FUKASE NO OWARI</h4>
+                                <span class="project-tag">個人制作</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://kawashimadaichi.tokyo/portfolio/fukase-no-owari" target="_blank">Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Tech Stack</h2>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>ハードウェア | Hardware</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Raspberry Pi</span>
+                            <span class="skill-tag">ESP32</span>
+                            <span class="skill-tag">M5Stack</span>
+                            <span class="skill-tag">Arduino</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>ソフトウェア | Software</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Unity</span>
+                            <span class="skill-tag">Processing</span>
+                            <span class="skill-tag">p5.js</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Firebase</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>デジタルファブリケーション | Digital Fabrication</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">3Dプリンター</span>
+                            <span class="skill-tag">レーザーカッター</span>
+                            <span class="skill-tag">Fusion 360</span>
+                            <span class="skill-tag">KiCad</span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="skill-category">
+                        <h3>AI / 生成系 | AI / Generative</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">ChatGPT</span>
+                            <span class="skill-tag">Claude</span>
+                            <span class="skill-tag">Gemini</span>
+                            <span class="skill-tag">Stable Diffusion</span>
+                            <span class="skill-tag">Ollama</span>
+                            <span class="skill-tag">RAG構成</span>
+                            <span class="skill-tag">LLMローカル推論</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="media section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Media & Speaking</h2>
+                </div>
+                
+                <div class="media-content">
+                    <div class="media-category">
+                        <h3>メディア掲載</h3>
+                        <div class="media-list">
+                            <div class="media-item">
+                                <h4>パナソニックグループ採用情報</h4>
+                                <p>"エンジニア視点のクリエイティブで、未来のくらしをイノベーションしたい。"</p>
+                                <a href="https://recruit.jpn.panasonic.com/person/d_kawashima.html" target="_blank">記事を読む →</a>
+                            </div>
+                            
+                            <div class="media-item">
+                                <h4>パナソニック公式note「ソウゾウノート」</h4>
+                                <p>"エンジニア視点のクリエイティブで、未来のくらしをイノベーションしたい。"</p>
+                                <a href="https://youth-note.jpn.panasonic.com/n/n368a23e76304" target="_blank">記事を読む →</a>
+                            </div>
+                            
+                            <div class="media-item">
+                                <h4>Make New Magazine</h4>
+                                <p>"「ものづくり」をもっと自由に。プロトタイプ・コミュニティ「エピトトープ」の挑戦。"</p>
+                                <a href="https://makenew.panasonic.jp/magazine/articles/023/" target="_blank">記事を読む →</a>
+                            </div>
+                            
+                            <div class="media-item">
+                                <h4>Make New Magazine</h4>
+                                <p>"デザインスタジオ・FUTURE LIFE FACTORYがレトロな家電をハック。昔のステレオから生まれる未来の音楽体験とは？"</p>
+                                <a href="https://makenew.panasonic.jp/magazine/articles/017/" target="_blank">記事を読む →</a>
+                            </div>
+                            
+                            <div class="media-item">
+                                <h4>『自然のやさしさを探るAWARD』インタビュー記事</h4>
+                                <p>"大切な誰かへ届けたいみんなのモノづくりを支援する" D+IOプロジェクトについて</p>
+                                <a href="https://awrd.com/award/sozo-yasashii/blog/interview02" target="_blank">記事を読む →</a>
+                            </div>
+                            
+                            <div class="media-item">
+                                <h4>XD（クロスディー）</h4>
+                                <p>"「人間の創造力を取り戻す」パナソニックが「D+IO」プロジェクトを始動"</p>
+                                <a href="https://exp-d.com/topics/8561/" target="_blank">記事を読む →</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="media-category">
+                        <h3>登壇・講演</h3>
+                        <div class="media-list">
+                            <div class="media-item">
+                                <h4>Designship 2019</h4>
+                                <p>"メーカーにおけるデザインエンジニアの役割とラピッドプロトタイピングについて"<br>
+                                PA!GOの製作から得た経験を交えながらラピッドプロトタイピングによって生み出されたプロダクトについて講演</p>
+                                <a href="https://design-ship.jp/2019/session" target="_blank">詳細を見る →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contacts" class="contacts section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contacts</h2>
+                </div>
+                
+                <div class="contacts-content">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p>お仕事のご相談、プロジェクトについてのお問い合わせはこちらから。</p>
+                        
+                        <div class="contact-form">
+                            <div class="form-group">
+                                <label for="email">メールアドレス</label>
+                                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">メッセージ</label>
+                                <textarea id="message" name="message" rows="6" placeholder="お問い合わせ内容をご記入ください..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary">Send Message</button>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-links">
+                        <h3>Links</h3>
+                        <div class="links-list">
+                            <a href="https://kawashimadaichi.tokyo" target="_blank" class="link-item">
+                                <span class="link-label">Portfolio</span>
+                                <span class="link-desc">作品とプロジェクトの詳細</span>
+                            </a>
+                            
+                            <a href="https://manomono.net" target="_blank" class="link-item">
+                                <span class="link-label">MANO MONO</span>
+                                <span class="link-desc">個人事業・受託開発</span>
+                            </a>
+                            
+                            <a href="https://panasonic.co.jp/design/flf/" target="_blank" class="link-item">
+                                <span class="link-label">FUTURE LIFE FACTORY</span>
+                                <span class="link-desc">パナソニック・先行開発チーム</span>
+                            </a>
+                            
+                            <a href="https://x.com/daichi000daichi" target="_blank" class="link-item">
+                                <span class="link-label">X (Twitter)</span>
+                                <span class="link-desc">日々の活動や思考をシェア</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Daichi Kawashima. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
