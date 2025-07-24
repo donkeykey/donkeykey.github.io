@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>川島大地 | プロトタイプエンジニア</title>
     <meta name="description" content="川島大地（Daichi Kawashima）のポートフォリオサイト。パナソニック FUTURE LIFE FACTORY所属のクリエイティブエンジニア・プロトタイプエンジニア。">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
     <script>
-        // Redirect handling for GitHub Pages
+        // GitHub Pages SPA redirect handling
         (function() {
-            var redirect = sessionStorage.redirect;
-            delete sessionStorage.redirect;
-            if (redirect && redirect != location.href) {
-                history.replaceState(null, null, redirect);
-            }
+            var pathSegmentsToKeep = 0;
+            var l = window.location;
+            l.replace(
+                l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+                l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + 
+                '/?/' + 
+                l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+                (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+                l.hash
+            );
         })();
     </script>
 </head>
@@ -173,7 +178,7 @@
                 <div class="projects-grid">
                     <div class="project-card" data-project="pago" data-category="設計・開発">
                         <div class="project-image">
-                            <img src="assets/images/projects/pago.jpg" alt="PA!GO" loading="lazy">
+                            <img src="//assets/images/projects/pago.jpg" alt="PA!GO" loading="lazy">
                         </div>
                         <div class="project-content">
                             <div class="project-header">
@@ -194,7 +199,7 @@
 
                     <div class="project-card" data-project="hyke-575" data-category="設計・開発">
                         <div class="project-image">
-                            <img src="assets/images/projects/hyke-575.jpg" alt="HYKE-575" loading="lazy">
+                            <img src="//assets/images/projects/hyke-575.jpg" alt="HYKE-575" loading="lazy">
                         </div>
                         <div class="project-content">
                             <div class="project-header">
@@ -213,7 +218,7 @@
 
                     <div class="project-card" data-project="remix" data-category="設計・開発">
                         <div class="project-image">
-                            <img src="assets/images/projects/remix.jpg" alt="リミックス" loading="lazy">
+                            <img src="/assets/images/projects/remix.jpg" alt="リミックス" loading="lazy">
                         </div>
                         <div class="project-content">
                             <div class="project-header">
@@ -228,7 +233,7 @@
                     </div>
                     <div class="project-card" data-project="kotoyamahyakkei" data-category="テクニカルディレクション">
                         <div class="project-image">
-                            <img src="assets/images/projects/kotoyamahyakkei.jpg" alt="言山百景" loading="lazy">
+                            <img src="/assets/images/projects/kotoyamahyakkei.jpg" alt="言山百景" loading="lazy">
                         </div>
                         <div class="project-content">
                             <div class="project-header">
@@ -244,7 +249,7 @@
 
                     <div class="project-card" data-project="tariki" data-category="テクニカルディレクション">
                         <div class="project-image">
-                            <img src="assets/images/projects/tariki.png" alt="他力研究所" loading="lazy">
+                            <img src="/assets/images/projects/tariki.png" alt="他力研究所" loading="lazy">
                         </div>
                         <div class="project-content">
                             <div class="project-header">
@@ -260,7 +265,7 @@
 
                     <div class="project-card" data-project="epytotorp" data-category="テクニカルディレクション">
                         <div class="project-image">
-                            <img src="assets/images/projects/epytotorp.png" alt="EPYTOTORP" loading="lazy">
+                            <img src="/assets/images/projects/epytotorp.png" alt="EPYTOTORP" loading="lazy">
                         </div>
                         <div class="project-content">
                             <div class="project-header">
@@ -276,7 +281,7 @@
 
                     <div class="project-card" data-project="doing_io" data-category="テクニカルディレクション">
                         <div class="project-image">
-                            <img src="assets/images/projects/doing_io.jpg" alt="D+IO" loading="lazy">
+                            <img src="/assets/images/projects/doing_io.jpg" alt="D+IO" loading="lazy">
                         </div>
                         <div class="project-content">
                             <div class="project-header">
@@ -292,7 +297,7 @@
 
                     <div class="project-card" data-project="kotobatabi" data-category="テクニカルディレクション">
                         <div class="project-image">
-                            <img src="assets/images/projects/kotobatabi.jpg" alt="KOTOBATABI" loading="lazy">
+                            <img src="/assets/images/projects/kotobatabi.jpg" alt="KOTOBATABI" loading="lazy">
                         </div>
                         <div class="project-content">
                             <div class="project-header">
@@ -311,7 +316,7 @@
 
                     <div class="project-card" data-project="trendgpt" data-category="個人事業">
                         <div class="project-image">
-                            <img src="assets/images/projects/trendgpt.png" alt="TrendGPT" loading="lazy">
+                            <img src="/assets/images/projects/trendgpt.png" alt="TrendGPT" loading="lazy">
                         </div>
                         <div class="project-content">
                             <div class="project-header">
@@ -327,7 +332,7 @@
 
                     <div class="project-card" data-project="chameleon-news" data-category="個人事業">
                         <div class="project-image">
-                            <img src="assets/images/projects/chameleon-news.png" alt="Chameleon News" loading="lazy">
+                            <img src="/assets/images/projects/chameleon-news.png" alt="Chameleon News" loading="lazy">
                         </div>
                         <div class="project-content">
                             <div class="project-header">
@@ -356,7 +361,7 @@
 
                     <div class="project-card" data-project="ai-art-frame" data-category="個人制作">
                         <div class="project-image">
-                            <img src="assets/images/projects/ai-art-frame.jpg" alt="AI ART FRAME" loading="lazy">
+                            <img src="/assets/images/projects/ai-art-frame.jpg" alt="AI ART FRAME" loading="lazy">
                         </div>
                         <div class="project-content">
                             <div class="project-header">
@@ -371,7 +376,7 @@
 
                     <div class="project-card" data-project="ano-pictogram" data-category="個人制作">
                         <div class="project-image">
-                            <img src="assets/images/projects/ano-pictogram.png" alt="ANO PICTOGRAM" loading="lazy">
+                            <img src="/assets/images/projects/ano-pictogram.png" alt="ANO PICTOGRAM" loading="lazy">
                         </div>
                         <div class="project-content">
                             <div class="project-header">
@@ -386,7 +391,7 @@
 
                     <div class="project-card" data-project="oppiroge-tongs" data-category="個人制作">
                         <div class="project-image">
-                            <img src="assets/images/projects/oppiroge-tongs.jpg" alt="OPPIROGE TONGS" loading="lazy">
+                            <img src="/assets/images/projects/oppiroge-tongs.jpg" alt="OPPIROGE TONGS" loading="lazy">
                         </div>
                         <div class="project-content">
                             <div class="project-header">
@@ -401,7 +406,7 @@
 
                     <div class="project-card" data-project="bokkin-bako" data-category="個人制作">
                         <div class="project-image">
-                            <img src="assets/images/projects/bokkin-bako.jpg" alt="BOKKIN BAKO" loading="lazy">
+                            <img src="/assets/images/projects/bokkin-bako.jpg" alt="BOKKIN BAKO" loading="lazy">
                         </div>
                         <div class="project-content">
                             <div class="project-header">
@@ -416,7 +421,7 @@
 
                     <div class="project-card" data-project="fukase-no-owari" data-category="個人制作">
                         <div class="project-image">
-                            <img src="assets/images/projects/fukase-no-owari.png" alt="FUKASE NO OWARI" loading="lazy">
+                            <img src="/assets/images/projects/fukase-no-owari.png" alt="FUKASE NO OWARI" loading="lazy">
                         </div>
                         <div class="project-content">
                             <div class="project-header">
@@ -614,16 +619,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script>
-        // GitHub Pages redirect handling for direct URLs
-        (function() {
-            const path = window.location.pathname;
-            if (path !== '/') {
-                sessionStorage.redirect = location.href;
-                location.replace('/');
-            }
-        })();
-    </script>
+    <script src="/script.js"></script>
 </body>
 </html>
