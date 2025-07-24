@@ -565,15 +565,16 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     });
 
-    // Intersection Observer for scroll animations
+    // Intersection Observer for scroll animations - improved for mobile
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.05, // Reduced threshold for better mobile detection
+        rootMargin: '0px 0px -20px 0px' // Reduced rootMargin for mobile
     };
 
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                console.log('Element became visible:', entry.target.id || entry.target.className);
                 entry.target.classList.add('visible');
             }
         });
@@ -585,6 +586,22 @@ document.addEventListener('DOMContentLoaded', async function() {
         element.classList.add('fade-in');
         observer.observe(element);
     });
+
+    // Mobile detection and fallback
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    // Force visibility for mobile devices after 2 seconds as fallback
+    if (isMobile) {
+        console.log('Mobile device detected, setting up fallback visibility');
+        setTimeout(() => {
+            animateElements.forEach(element => {
+                if (!element.classList.contains('visible')) {
+                    console.log('Force showing element on mobile:', element.id || element.className);
+                    element.classList.add('visible');
+                }
+            });
+        }, 2000);
+    }
 
     // Active navigation highlighting
     const sections = document.querySelectorAll('section[id]');

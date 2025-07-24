@@ -187,6 +187,27 @@ body {
     transform: translateY(0);
 }
 
+/* Fallback for reduced motion preferences and mobile issues */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* Emergency fallback - show content after 3 seconds regardless of animation */
+.fade-in {
+    animation: emergency-show 0s 3s forwards;
+}
+
+@keyframes emergency-show {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Typography */
 .section-header {
     text-align: center;
