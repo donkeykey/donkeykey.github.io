@@ -305,6 +305,39 @@ body {
     animation: glow 2s ease-in-out infinite;
 }
 
+/* Mobile responsive layout for hero subtitle */
+@media (max-width: 600px) {
+    .hero-subtitle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        line-height: 1.4;
+    }
+    
+    .subtitle-separator {
+        display: none; /* Hide separator on mobile */
+    }
+    
+    .subtitle-line {
+        display: block;
+        margin: 0.2rem 0;
+    }
+}
+
+/* Keep inline layout for larger screens */
+@media (min-width: 601px) {
+    .hero-subtitle {
+        display: block;
+        text-align: center;
+    }
+    
+    .subtitle-line,
+    .subtitle-separator {
+        display: inline;
+    }
+}
+
 .hero-description {
     font-size: 1.125rem;
     color: var(--text-secondary);
