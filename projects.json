@@ -5,7 +5,7 @@
     "category": "設計・開発",
     "description": "子どもが外の世界で出会った花、動物、虫などを内蔵カメラで撮影すると、Googleの機械学習技術（TensorFlow、Edge TPU）によりAIがそれらが何かを音声で教えてくれる。スマホやゲーム機の代わりに子どもが野外で過ごす時間を増やし、「探索する」「遊ぶ」「学習する」意欲を育むことを目的とする。",
     "images": [
-      "assets/images/projects/pago.jpg"
+      "/assets/images/projects/pago.jpg"
     ],
     "awards": [
       "iF DESIGN AWARD 2020 GOLD",
@@ -25,7 +25,7 @@
     "category": "設計・開発",
     "description": "風景を俳句に変換するAIカメラ。撮影した風景とGPS情報、天気データを元にGPT-4oが俳句を生成し、内蔵プリンターで即座に印刷。松尾芭蕉や小林一茶など歴史的俳人のスタイルを選択可能で、テクノロジーと伝統文化の融合で新しい感性の刺激をもたらす。",
     "images": [
-      "assets/images/projects/hyke-575.jpg"
+      "/assets/images/projects/hyke-575.jpg"
     ],
     "awards": [
       "Red Dot Award: Design Concept 2025"
@@ -43,7 +43,7 @@
     "category": "設計・開発",
     "description": "1962年発売のパナソニック製キャビネット家具調ステレオ（スーパーフォニックステレオHE-3000）を現代のテクノロジーでアップデート。レコード針のかわりにカラーセンサーを搭載し、レコード盤状のシートに描かれた絵を音に変えて音楽を奏でる楽器に生まれ変わらせた。色に音階を割り当て思い通りのメロディを奏でることも、自由な絵で予想不可能な音楽を奏でることも可能。過去の作り手との対話を通じて、デジタルとフィジカルの交差する未来への問いを形にしたプロジェクト。",
     "images": [
-      "assets/images/projects/remix.jpg"
+      "/assets/images/projects/remix.jpg"
     ],
     "awards": [],
     "technologies": ["カラーセンサー", "Arduino", "音声合成", "Hardware Hacking"],
@@ -59,7 +59,7 @@
     "category": "テクニカルディレクション",
     "description": "リモート観光やオンラインイベントの普及により希薄化していく「人と地域との関係性」をつなぎ変える新たな魅力の引き出し方を提案。スマートフォンで発した言葉が遠く離れた土地に\"物理的に\"舞い降りるオブジェとなり、その地域に新しい魅力や文化を生み出すネットワーク連動型インスタレーション。",
     "images": [
-      "assets/images/projects/kotoyamahyakkei.jpg"
+      "/assets/images/projects/kotoyamahyakkei.jpg"
     ],
     "awards": [],
     "technologies": ["IoT", "音声認識", "ネットワーク", "インスタレーション"],
@@ -75,7 +75,7 @@
     "category": "テクニカルディレクション",
     "description": "従来の産業において誤差や障害と見なされ排除されてきた自然の不確定要素を、共に活かすべき存在として捉え直し、「揺らぎ」や「偶然」と手を取り合って未来の産業のあり方を再構築することを目的とする実験的研究。",
     "images": [
-      "assets/images/projects/tariki.png"
+      "/assets/images/projects/tariki.png"
     ],
     "awards": [],
     "technologies": ["センサー", "データ解析", "機械学習", "IoT"],
@@ -91,7 +91,7 @@
     "category": "テクニカルディレクション",
     "description": "プロトタイプ名は「PROTOTYPE」を逆から読んだもの。ソフトウェア開発のオープンソースコミュニティの考えを応用し、消費者自身がContributor（貢献者）としてものづくりに参加・貢献することで、より素晴らしいプロダクトに磨かれる新しい製品開発手法を提案。",
     "images": [
-      "assets/images/projects/epytotorp.png"
+      "/assets/images/projects/epytotorp.png"
     ],
     "awards": [],
     "technologies": ["Web Platform", "Community", "オープンソース", "プロダクト開発"],
@@ -107,7 +107,7 @@
     "category": "テクニカルディレクション",
     "description": "これまでの「DIY = Do It Yourself」から「Do It Ourselves」へ発想を転換。市販の電子部品や身の回りの素材を使ったプロダクトの作り方をGitHubで公開し、ユーザー間でソースコードをカスタマイズしたりアップデートを提案し合ったりできる仕組みを提供。",
     "images": [
-      "assets/images/projects/doing_io.jpg"
+      "/assets/images/projects/doing_io.jpg"
     ],
     "awards": [],
     "technologies": ["GitHub", "DIY", "電子工作", "コミュニティ"],
@@ -123,7 +123,7 @@
     "category": "テクニカルディレクション",
     "description": "音声認識により発話した言葉がテキスト化され、現実と紐付いたデジタル空間に「言葉雲」として舞い上がるARアプリケーション。スマホやARグラスを通じて他のユーザーの言葉雲を見ることができ、GPS内蔵の専用音声入力デバイスでは言葉雲がある場所で光ってお知らせ。言葉雲が集まっている場所を発見して新たな出会いや発見を求める「ちょっとした旅」を誘発する体験を提供する。",
     "images": [
-      "assets/images/projects/kotobatabi.jpg"
+      "/assets/images/projects/kotobatabi.jpg"
     ],
     "awards": [
       "Red Dot Award: Design Concept 2022"
@@ -141,7 +141,7 @@
     "category": "個人事業（MANO MONO）",
     "description": "特定カテゴリに関するAIがニュースを要約・メール配信するサービス",
     "images": [
-      "assets/images/projects/trendgpt.png"
+      "/assets/images/projects/trendgpt.png"
     ],
     "awards": [],
     "technologies": ["AI", "GPT API", "ニュース記事解析", "Web サービス", "決済システム"],
@@ -157,7 +157,7 @@
     "category": "個人事業（MANO MONO）",
     "description": "CM動画のトレンドを配信するAIメディア",
     "images": [
-      "assets/images/projects/chameleon-news.png"
+      "/assets/images/projects/chameleon-news.png"
     ],
     "awards": [],
     "technologies": ["AI", "動画解析", "トレンド分析", "メディア"],
@@ -185,7 +185,7 @@
     "category": "個人制作（まのもの）",
     "description": "AIで生成されたアート作品を自動的に表示し、定期的に新しい作品に切り替わるデジタルフォトフレーム。",
     "images": [
-      "assets/images/projects/ai-art-frame.jpg"
+      "/assets/images/projects/ai-art-frame.jpg"
     ],
     "awards": [],
     "technologies": ["AI画像生成", "Raspberry Pi", "ディスプレイ制御"],
@@ -199,7 +199,7 @@
     "category": "個人制作（まのもの）",
     "description": "動きのあるピクトグラムで情報をより分かりやすく伝えるシステム。",
     "images": [
-      "assets/images/projects/ano-pictogram.png"
+      "/assets/images/projects/ano-pictogram.png"
     ],
     "awards": [],
     "technologies": ["画像解析", "カメラ", "グラフィックデザイン"],
@@ -213,7 +213,7 @@
     "category": "個人制作（まのもの）",
     "description": "調理をサポートする機能を搭載したスマートなキッチンツール。",
     "images": [
-      "assets/images/projects/oppiroge-tongs.jpg"
+      "/assets/images/projects/oppiroge-tongs.jpg"
     ],
     "awards": [],
     "technologies": ["IoT", "機構設計", "センサー"],
@@ -227,7 +227,7 @@
     "category": "個人制作（まのもの）",
     "description": "現代的な募金体験を提供するデジタル募金箱。",
     "images": [
-      "assets/images/projects/bokkin-bako.jpg"
+      "/assets/images/projects/bokkin-bako.jpg"
     ],
     "awards": [],
     "technologies": ["IoT", "機構設計"],
@@ -241,7 +241,7 @@
     "category": "個人制作（まのもの）",
     "description": "音楽とテクノロジーを融合させたインタラクティブな体験作品。",
     "images": [
-      "assets/images/projects/fukase-no-owari.png"
+      "/assets/images/projects/fukase-no-owari.png"
     ],
     "awards": [],
     "technologies": ["Webサービス"],

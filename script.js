@@ -313,7 +313,7 @@ function showProjectModal(projectId) {
                     </div>
                     ${project.images.length > 0 ? `
                         <div class="modal-image">
-                            <img src="${project.images[0]}" alt="${project.title}" loading="lazy">
+                            <img src="/${project.images[0]}" alt="${project.title}" loading="lazy">
                         </div>
                     ` : ''}
                     <div class="modal-body">
