@@ -576,6 +576,16 @@ document.addEventListener('DOMContentLoaded', async function() {
             if (entry.isIntersecting) {
                 console.log('Element became visible:', entry.target.id || entry.target.className);
                 entry.target.classList.add('visible');
+                
+                // Add typing animation to section titles
+                const sectionTitle = entry.target.querySelector('.section-title');
+                if (sectionTitle && !sectionTitle.classList.contains('typing-animation')) {
+                    // Store original text and add data attribute
+                    const originalText = sectionTitle.textContent;
+                    sectionTitle.setAttribute('data-text', originalText);
+                    sectionTitle.classList.add('typing-animation');
+                    console.log('Started typing animation for:', originalText);
+                }
             }
         });
     }, observerOptions);
@@ -598,6 +608,15 @@ document.addEventListener('DOMContentLoaded', async function() {
                 if (!element.classList.contains('visible')) {
                     console.log('Force showing element on mobile:', element.id || element.className);
                     element.classList.add('visible');
+                    
+                    // Also trigger typing animation for mobile
+                    const sectionTitle = element.querySelector('.section-title');
+                    if (sectionTitle && !sectionTitle.classList.contains('typing-animation')) {
+                        const originalText = sectionTitle.textContent;
+                        sectionTitle.setAttribute('data-text', originalText);
+                        sectionTitle.classList.add('typing-animation');
+                        console.log('Started mobile typing animation for:', originalText);
+                    }
                 }
             });
         }, 2000);
@@ -774,7 +793,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         document.body.classList.add('loaded');
     }, 100);
 
-    console.log('%c$ portfolio --loaded', 'color: #39d353; font-family: JetBrains Mono; font-size: 14px;');
+    console.log('%c$ portfolio --loaded', 'color: #00c200; font-family: JetBrains Mono; font-size: 14px;');
     console.log('%cWelcome to Daichi Kawashima\'s portfolio terminal.', 'color: #e6edf3; font-family: JetBrains Mono; font-size: 12px;');
     console.log('%cType "help" for available commands... (just kidding!)', 'color: #7d8590; font-family: JetBrains Mono; font-size: 12px;');
 });

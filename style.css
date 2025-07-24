@@ -11,8 +11,8 @@
     --bg-tertiary: #21262d;
     --text-primary: #e6edf3;
     --text-secondary: #7d8590;
-    --text-accent: #39d353;
-    --terminal-green: #39d353;
+    --text-accent: #00c200;
+    --terminal-green: #00c200;
     --terminal-white: #e6edf3;
     --border-color: #30363d;
     --shadow-dark: rgba(0, 0, 0, 0.3);
@@ -221,6 +221,27 @@ body {
     margin-bottom: var(--spacing-md);
     position: relative;
     text-shadow: 0 0 10px rgba(230, 237, 243, 0.3);
+}
+
+/* Typing animation for section titles */
+.section-title.typing-animation {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: section-typing 1.5s steps(var(--char-count, 8)) 0.2s both;
+}
+
+/* Different character counts for different titles */
+.section-title.typing-animation[data-text*="Profile"] { --char-count: 7; }
+.section-title.typing-animation[data-text*="Projects"] { --char-count: 8; }
+.section-title.typing-animation[data-text*="Tech Stack"] { --char-count: 10; }
+.section-title.typing-animation[data-text*="Media"] { --char-count: 16; }
+.section-title.typing-animation[data-text*="Contacts"] { --char-count: 8; }
+
+@keyframes section-typing {
+    from { width: 0; }
+    to { width: 100%; }
 }
 
 .section-title::after {
@@ -602,7 +623,7 @@ body {
     background: rgba(33, 38, 45, 0.8); /* Semi-transparent */
     backdrop-filter: blur(5px);
     border-radius: var(--border-radius);
-    /*overflow: hidden;*/
+    overflow: hidden;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
     position: relative;
@@ -623,6 +644,7 @@ body {
     overflow: hidden;
     position: relative;
     border-bottom: 1px solid var(--border-color);
+    border-radius: var(--border-radius) var(--border-radius) 0 0; /* Top corners only */
 }
 
 .project-image img {
@@ -631,6 +653,7 @@ body {
     object-fit: cover;
     transition: transform 0.3s ease;
     filter: brightness(0.8);
+    border-radius: var(--border-radius) var(--border-radius) 0 0; /* Match parent corners */
 }
 
 .placeholder-image {
