@@ -1348,6 +1348,74 @@ button:focus {
     flex-wrap: wrap;
 }
 
+/* Modal media section styles */
+.modal-media {
+    margin-bottom: var(--spacing-xl);
+}
+
+.modal-media h3 {
+    font-size: 1.25rem;
+    color: var(--terminal-green);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+}
+
+.media-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.media-link-item {
+    background: rgba(33, 38, 45, 0.4);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.media-link-item:hover {
+    background: rgba(33, 38, 45, 0.6);
+    border-color: var(--terminal-green);
+    transform: translateY(-2px);
+}
+
+.media-link {
+    display: block;
+    padding: var(--spacing-md);
+    text-decoration: none;
+    color: inherit;
+}
+
+.media-title {
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.4;
+}
+
+.media-source {
+    font-size: 0.875rem;
+    color: var(--terminal-green);
+    font-weight: 400;
+}
+
+/* Mobile responsive styles for media links */
+@media (max-width: 768px) {
+    .media-link {
+        padding: var(--spacing-sm);
+    }
+    
+    .media-title {
+        font-size: 0.9rem;
+    }
+    
+    .media-source {
+        font-size: 0.8rem;
+    }
+}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }

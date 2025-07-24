@@ -356,6 +356,21 @@ function showProjectModal(projectId) {
                                 }).join('')}
                             </div>
                         ` : ''}
+                        ${project.media && project.media.length > 0 ? `
+                            <div class="modal-media">
+                                <h3>メディア掲載・関連記事</h3>
+                                <div class="media-links">
+                                    ${project.media.map(media => `
+                                        <div class="media-link-item">
+                                            <a href="${media.url}" target="_blank" class="media-link">
+                                                <div class="media-title">${media.title}</div>
+                                                <div class="media-source">${media.source}</div>
+                                            </a>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        ` : ''}
                     </div>
                 </div>
             </div>

@@ -236,17 +236,51 @@
     "links": {}
   },
   "fukase-no-owari": {
-    "title": "FUKASE NO OWARI",
-    "subtitle": "インタラクティブ音楽体験プロジェクト",
+    "title": "FUKASE NO OWARI（フカセ暗号ジェネレーター）",
+    "subtitle": "SEKAI NO OWARIのFukaseの暗号ツイートを再現するWebジェネレーター",
     "category": "個人制作（まのもの）",
-    "description": "音楽アーティスト「SEKAI NO OWARI」のFukaseをテーマにしたインタラクティブWebアプリケーション。ユーザーの操作に応じて音楽が変化し、視覚エフェクトと連動する体験型デジタルアート作品。Web Audio APIとCanvas技術を駆使し、リアルタイムで音響解析を行いながら幾何学的なビジュアルパターンを生成。音楽とテクノロジーの境界を曖昧にし、新しい音楽体験の可能性を探求したエクスペリメンタルプロジェクト。",
+    "description": "2015年8月にSEKAI NO OWARIのボーカルFukaseが投稿した謎の暗号ツイート「12 11552 21」を再現・解読できるWebアプリケーション。色と数字を組み合わせた独特の暗号システム（白の1番目の文字「W」、赤の2番目の文字「E」など）を解析し、誰でも同様の暗号メッセージを生成できるツールとして開発。公開から短期間でTwitterでバズり、Fukase本人からも「すごい物が出来てる!!」と反応を得た。後にAWSサーバーレス化を行い、Lambda・S3・Route53を活用した完全クラウド化を実現。ギガジン、ネットラボ、エキサイトニュースなどメディア掲載多数、フジテレビのニュース番組でも紹介された話題作。",
     "images": [
       "/assets/images/projects/fukase-no-owari.png"
     ],
     "awards": [],
-    "technologies": ["Webサービス"],
+    "technologies": ["Node.js", "AWS Lambda", "AWS S3", "Route53", "Twitter API", "ImageMagick", "Webサービス"],
     "role": "企画・開発",
-    "year": "2021",
-    "links": {}
+    "year": "2015",
+    "links": {
+      "website": "http://fukase-no-owari.net/"
+    },
+    "media": [
+      {
+        "title": "Fukaseのquestionツイートを再現！「フカセ暗号ジェネレーター」",
+        "source": "KAI-YOU.net",
+        "url": "https://kai-you.net/article/19735"
+      },
+      {
+        "title": "セカオワFukaseが破局をつぶやいた暗号ツイートをサクッと作る方法＆解読方法",
+        "source": "usedoor",
+        "url": "https://usedoor.jp/howto/life/koneta/sekai-no-owari-fukase-angou-tweet-question-generator/"
+      },
+      {
+        "title": "好きな言葉でセカオワFukaseの暗号が作れる！「フカセ暗号ジェネレーター」作品集",
+        "source": "Togetter",
+        "url": "https://togetter.com/li/858955"
+      },
+      {
+        "title": "セカオワ・Fukase「中二病」破局暗号作れる「フカセ暗号ジェネレーター」",
+        "source": "エキサイトニュース",
+        "url": "https://www.excite.co.jp/news/article/E1439196586330/"
+      },
+      {
+        "title": "AWSでフカセ暗号ジェネレータを完全サーバレス化した話",
+        "source": "Qiita",
+        "url": "https://qiita.com/dkawashi/items/0f49a1749cc7acbf74d6"
+      },
+      {
+        "title": "セカオワ暗号はなぜ解けたのか！ そもそもあれは暗号なの？",
+        "source": "Yahoo!ニュース",
+        "url": "https://news.yahoo.co.jp/expert/articles/5d055a4d333b80899127bcd900d61bd20b4eae2c"
+      }
+    ]
   }
 }
