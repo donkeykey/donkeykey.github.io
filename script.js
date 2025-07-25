@@ -808,6 +808,75 @@ document.addEventListener('DOMContentLoaded', async function() {
         document.body.classList.add('loaded');
     }, 100);
 
+    // Contact form submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const submitButton = this.querySelector('button[type="submit"]');
+            
+            // Show loading state
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+            
+            try {
+                // API call to send email
+                const response = await fetch('https://r5djgru6o2.execute-api.ap-northeast-1.amazonaws.com/prod/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        to: 'daichi@manomono.net',
+                        subject: `【ポートフォリオサイトからのお問い合わせ】${email}`,
+                        html: `
+                            <h2>ポートフォリオサイトからお問い合わせがありました</h2>
+                            <p><strong>送信者メールアドレス:</strong> ${email}</p>
+                            <p><strong>メッセージ:</strong></p>
+                            <div style="padding: 15px; background-color: #f5f5f5; border-left: 4px solid #39d353; margin: 10px 0;">
+                                ${message.replace(/\n/g, '<br>')}
+                            </div>
+                            <hr>
+                            <small>このメールは https://kawashimadaichi.tokyo のお問い合わせフォームから送信されました。</small>
+                        `
+                    })
+                });
+                
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.message || 'Failed to send message');
+                }
+                
+                // Success feedback
+                submitButton.textContent = 'Message Sent!';
+                submitButton.style.background = 'var(--terminal-green)';
+                
+                // Clear form
+                contactForm.reset();
+                
+                // Show success message
+                alert('メッセージが送信されました。ありがとうございます！');
+                
+            } catch (error) {
+                console.error('Error sending message:', error);
+                submitButton.textContent = 'Send Failed';
+                submitButton.style.background = '#ff4444';
+                alert('メッセージの送信に失敗しました。もう一度お試しください。');
+            } finally {
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                    submitButton.style.background = '';
+                }, 3000);
+            }
+        });
+    }
+
     console.log('%c$ portfolio --loaded', 'color: #00c200; font-family: JetBrains Mono; font-size: 14px;');
     console.log('%cWelcome to Daichi Kawashima\'s portfolio terminal.', 'color: #e6edf3; font-family: JetBrains Mono; font-size: 12px;');
     console.log('%cType "help" for available commands... (just kidding!)', 'color: #7d8590; font-family: JetBrains Mono; font-size: 12px;');
