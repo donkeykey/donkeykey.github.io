@@ -542,7 +542,7 @@ body {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(180deg, var(--terminal-green), var(--terminal-white));
+    background: var(--terminal-green);
 }
 
 .award-item {
