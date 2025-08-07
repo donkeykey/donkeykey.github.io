@@ -808,6 +808,20 @@ document.addEventListener('DOMContentLoaded', async function() {
         document.body.classList.add('loaded');
     }, 100);
 
+    // Add click handlers to award project links
+    document.querySelectorAll('.award-project-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const projectId = this.getAttribute('data-project');
+            console.log('Award project link clicked, projectId:', projectId);
+            if (projectId && projectsData[projectId]) {
+                showProjectModal(projectId);
+            } else {
+                console.error('Project not found:', projectId);
+            }
+        });
+    });
+
     // Contact form submission
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {

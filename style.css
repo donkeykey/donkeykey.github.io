@@ -637,6 +637,16 @@ body {
     font-style: italic;
 }
 
+.award-project-link {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.award-project-link:hover {
+    color: var(--terminal-green);
+    text-decoration: underline;
+}
+
 /* Projects Section */
 .projects {
     background: rgba(13, 17, 23, 0.85); /* Semi-transparent */
