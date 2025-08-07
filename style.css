@@ -529,6 +529,60 @@ body {
     font-style: italic;
 }
 
+/* Career List */
+.career-list {
+    position: relative;
+    padding-left: var(--spacing-xl);
+}
+
+.career-list::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--terminal-green);
+}
+
+.career-item {
+    position: relative;
+    margin-bottom: var(--spacing-xl);
+    padding-left: var(--spacing-xl);
+}
+
+.career-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background: var(--terminal-green);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--shadow-glow);
+}
+
+.career-year {
+    font-size: 0.875rem;
+    color: var(--terminal-green);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.career-content h4 {
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+}
+
+.career-content p {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
 /* Awards List */
 .awards-list {
     position: relative;
