@@ -286,5 +286,23 @@
         "url": "https://news.yahoo.co.jp/expert/articles/5d055a4d333b80899127bcd900d61bd20b4eae2c"
       }
     ]
+  },
+  "e-otomo": {
+    "title": "e-Otomo（エオトモ）",
+    "subtitle": "電子ペーパー搭載のキーホルダー型オープンソースデバイス",
+    "category": "個人制作（まのもの）",
+    "description": "nRF52840を搭載したキーホルダー型デバイス。2色・3色の電子ペーパーを駆動し、BLEによってPCやスマホから送信された画像データを表示でき、お気に入りのキャラクターやアート作品を「お供」として日常に持ち歩くことができる。本プロジェクトはオープンソースとして公開しており、機能のカスタマイズやデザインの拡張も自由自在。自分のアイデアに合わせて\"自分だけのエオトモ\"をつくることができる。",
+    "images": [
+      "/assets/images/projects/e-otomo.jpg"
+    ],
+    "awards": [],
+    "technologies": ["nRF52840", "電子ペーパー", "BLE", "オープンソース", "組み込みシステム"],
+    "role": "設計・開発",
+    "year": "2025",
+    "links": {
+      "website": "https://e-otomo.manomono.net/",
+      "github": "https://github.com/manomono-23/e-otomo",
+      "github_web": "https://github.com/manomono-23/e-otomo-web"
+    }
   }
 }
