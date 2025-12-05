@@ -293,7 +293,7 @@
     "category": "個人制作（まのもの）",
     "description": "nRF52840を搭載したキーホルダー型デバイス。2色・3色の電子ペーパーを駆動し、BLEによってPCやスマホから送信された画像データを表示でき、お気に入りのキャラクターやアート作品を「お供」として日常に持ち歩くことができる。本プロジェクトはオープンソースとして公開しており、機能のカスタマイズやデザインの拡張も自由自在。自分のアイデアに合わせて\"自分だけのエオトモ\"をつくることができる。",
     "images": [
-      "/assets/images/projects/e-otomo.jpg"
+      "/assets/images/projects/e-otomo.png"
     ],
     "awards": [],
     "technologies": ["nRF52840", "電子ペーパー", "BLE", "オープンソース", "組み込みシステム"],
@@ -303,6 +303,70 @@
       "website": "https://e-otomo.manomono.net/",
       "github": "https://github.com/manomono-23/e-otomo",
       "github_web": "https://github.com/manomono-23/e-otomo-web"
+    }
+  },
+  "stock-run": {
+    "title": "株ラン - Stock Run",
+    "subtitle": "金融市場体験マシン",
+    "category": "設計・開発",
+    "description": "日本の金融に対する意識は海外諸国に比べて低い。これからのビジネスパーソンに求められるのは「健康意識」と「金融知識」。この２つを同時に手に入れるための全く新しい体験マシーン。",
+    "images": [
+      "/assets/images/projects/stock-run.png"
+    ],
+    "awards": [],
+    "technologies": ["ハードウェア", "インタラクティブ体験"],
+    "role": "開発",
+    "year": "2018",
+    "links": {
+      "project": "https://birdman.tokyo/projects/financial-market-experience-machine-stock-run"
+    }
+  },
+  "hecate-island": {
+    "title": "HECATE ISLAND",
+    "subtitle": "クラブカルチャーとテクノロジーが融合した体験型ショーパブ",
+    "category": "設計・開発",
+    "description": "PartyドリンクHecateの発売プロモーションとしてHecate Islandというショーパブをオープン。\"シラフでアガる\"というコンセプトで、すべてのParty Loverが楽しめる、クラブカルチャーとテクノロジーが融合した全く新しいParty体験を提供。客はエレベーターを降りると、まるでHecateという島に来たような感覚を味わうことができる。砂が敷かれたステージの真ん中には女神Hecateが氷の中に眠っており、時間が来るとダンサーが現れ、客と一緒に音の神、光の神、舞の神を復活させていく。盛り上がりが最高潮に達すると氷の中に眠っていた女神Hecateが復活するというストーリー。ローカルサーバーとデバイスが無線でつながり、コンテンツとデバイスが連携する仕組みを構築。",
+    "images": [
+      "/assets/images/projects/hecate-island.jpg"
+    ],
+    "awards": [],
+    "technologies": ["無線通信", "ローカルサーバー", "デバイス連携", "インタラクティブ体験", "ハードウェア"],
+    "role": "開発",
+    "year": "2018",
+    "links": {
+      "project": "https://birdman.tokyo/projects/hecate-island"
+    }
+  },
+  "toyota-hybrid-discovery": {
+    "title": "Toyota Hybrid Discovery Interactive Signage",
+    "subtitle": "超指向性スピーカーと画像解析を活用したインタラクティブサイネージ",
+    "category": "設計・開発",
+    "description": "タイのチェンマイで行われたToyota Hybrid Discoveryのプロモーションイベントで、超指向性スピーカーと画像解析を活用したインタラクティブサイネージを制作。サイネージにはタイのインフルエンサーたちが立っていて、通りがかった人を画像解析。着ている服の色やアクセサリーなどを判別しパーソナライズした会話内容を、指向性スピーカーで追従しその人に話しかける仕組み。画像解析の判別システムには機械学習も活用。インタラクティブサイネージの実装、システム、ハードウェア開発を担当。",
+    "images": [
+      "/assets/images/projects/toyota-hybrid-discovery.jpg"
+    ],
+    "awards": [],
+    "technologies": ["画像解析", "機械学習", "超指向性スピーカー", "インタラクティブサイネージ", "ハードウェア"],
+    "role": "開発",
+    "year": "2018",
+    "links": {
+      "project": "https://birdman.tokyo/projects/toyota-hybrid-discovery-interactive-signage-in-thailand"
+    }
+  },
+  "sixpad-app": {
+    "title": "SIXPAD APP",
+    "subtitle": "EMSデバイス連動アプリの開発",
+    "category": "設計・開発",
+    "description": "MTG社の開発するEMSデバイス「SIXPAD」をIoT化するにあたり、連動するアプリの開発を担当。",
+    "images": [
+      "/assets/images/projects/sixpad-app.jpg"
+    ],
+    "awards": [],
+    "technologies": ["IoT", "アプリ開発"],
+    "role": "開発",
+    "year": "2016",
+    "links": {
+      "project": "https://birdman.tokyo/projects/sixpad-app"
     }
   }
 }
