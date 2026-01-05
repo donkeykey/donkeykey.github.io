@@ -166,7 +166,8 @@ function renderSkills(techStack) {
         { key: 'hardware', title: 'Hardware' },
         { key: 'software', title: 'Software' },
         { key: 'fabrication', title: 'Digital Fabrication' },
-        { key: 'ai', title: 'AI & ML' }
+        { key: 'ai', title: 'AI & ML' },
+        { key: 'certifications', title: 'Certifications' }
     ];
 
     const html = categories.map(category => `

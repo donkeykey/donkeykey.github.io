@@ -58,6 +58,7 @@
     "hardware": ["Raspberry Pi", "ESP32", "M5Stack", "Arduino"],
     "software": ["Python", "Node.js", "JavaScript", "Unity", "Processing", "p5.js", "AWS", "Firebase"],
     "fabrication": ["3Dプリンター", "レーザーカッター", "Fusion 360", "KiCad"],
-    "ai": ["ChatGPT", "Claude", "Gemini", "Stable Diffusion", "Ollama", "RAG構成", "LLMローカル推論"]
+    "ai": ["ChatGPT", "Claude", "Gemini", "Stable Diffusion", "Ollama", "RAG構成", "LLMローカル推論"],
+    "certifications": ["第二種電気工事士"]
   }
 }
