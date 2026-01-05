@@ -416,5 +416,33 @@
     "links": {
       "project": "https://panasonic.co.jp/design/flf/works/future_prototyping/tangible/"
     }
+  },
+  "kaiho-no-kabe": {
+    "title": "解放の壁",
+    "subtitle": "壁の向こうの誰かに自分を投影して自分の境界線から体を出される体験",
+    "category": "設計・開発",
+    "description": "壁の向こうの誰かに自分を投影して、自分の境界線から体を出される体験を提供するインタラクティブインスタレーション。自己と他者の境界を曖昧にし、新しい身体感覚を探求する実験的プロジェクト。",
+    "images": [
+      "/assets/images/projects/kaiho-no-kabe.jpg"
+    ],
+    "awards": [],
+    "technologies": ["プロジェクションマッピング", "Kinect", "インタラクティブ", "インスタレーション"],
+    "role": "設計・開発",
+    "year": "2024",
+    "links": {}
+  },
+  "kankaku-mixer": {
+    "title": "感覚ミキサー",
+    "subtitle": "他者や空間をミキシングして自分のための現実をつくる体験",
+    "category": "設計・開発",
+    "description": "他者や空間をミキシングして自分のための現実をつくる体験を提供するインタラクティブシステム。複数の感覚情報を組み合わせることで、新しい知覚体験を創出する実験的プロジェクト。",
+    "images": [
+      "/assets/images/projects/kankaku-mixer.jpg"
+    ],
+    "awards": [],
+    "technologies": ["センシング技術", "映像合成", "インタラクティブ", "インスタレーション"],
+    "role": "設計・開発",
+    "year": "2024",
+    "links": {}
   }
 }
