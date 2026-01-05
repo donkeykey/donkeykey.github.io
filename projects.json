@@ -426,7 +426,7 @@
       "/assets/images/projects/kaiho-no-kabe.jpg"
     ],
     "awards": [],
-    "technologies": ["プロジェクションマッピング", "Kinect", "インタラクティブ", "インスタレーション"],
+    "technologies": ["生成AI", "動画合成", "Raspberry Pi", "インスタレーション"],
     "role": "設計・開発",
     "year": "2024",
     "links": {}
@@ -440,7 +440,7 @@
       "/assets/images/projects/kankaku-mixer.jpg"
     ],
     "awards": [],
-    "technologies": ["センシング技術", "映像合成", "インタラクティブ", "インスタレーション"],
+    "technologies": ["Arduino", "OSC", "インタラクティブ"],
     "role": "設計・開発",
     "year": "2024",
     "links": {}
