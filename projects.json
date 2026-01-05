@@ -12,7 +12,7 @@
       "CANNES LIONS 2020 SHORTLIST",
       "THE FWA 2019 FWA OF THE DAY"
     ],
-    "technologies": ["TensorFlow", "Edge TPU", "Google Cloud", "Hardware"],
+    "technologies": ["TensorFlow", "Edge TPU", "Google Cloud", "Raspberry Pi", "Hardware"],
     "role": "設計・開発",
     "year": "2019-2020",
     "links": {
@@ -30,7 +30,7 @@
     "awards": [
       "Red Dot Award: Design Concept 2025"
     ],
-    "technologies": ["GPT-4o", "カメラ", "プリンター", "GPS", "天気API"],
+    "technologies": ["OpenAI API", "Raspberry Pi", "カメラ", "サーマルプリンター", "GPS", "天気API"],
     "role": "設計・開発",
     "year": "2024-2025",
     "links": {
@@ -110,7 +110,7 @@
       "/assets/images/projects/doing_io.jpg"
     ],
     "awards": [],
-    "technologies": ["GitHub", "DIY", "電子工作", "コミュニティ"],
+    "technologies": ["GitHub", "DIY", "電子工作", "M5Stack", "コミュニティ"],
     "role": "テクニカルディレクション",
     "year": "2020",
     "links": {
@@ -190,7 +190,7 @@
       "/assets/images/projects/ai-art-frame.jpg"
     ],
     "awards": [],
-    "technologies": ["AI画像生成", "Raspberry Pi", "ディスプレイ制御"],
+    "technologies": ["AI画像生成", "Raspberry Pi", "電子ペーパー"],
     "role": "設計・製作",
     "year": "2023",
     "links": {}
@@ -346,7 +346,7 @@
       "/assets/images/projects/toyota-hybrid-discovery.jpg"
     ],
     "awards": [],
-    "technologies": ["画像解析", "機械学習", "超指向性スピーカー", "インタラクティブサイネージ", "ハードウェア"],
+    "technologies": ["Kinect", "画像解析", "機械学習", "超指向性スピーカー", "インタラクティブサイネージ", "ハードウェア"],
     "role": "開発",
     "year": "2018",
     "links": {
@@ -367,6 +367,54 @@
     "year": "2016",
     "links": {
       "project": "https://birdman.tokyo/projects/sixpad-app"
+    }
+  },
+  "mirrormo": {
+    "title": "MiRRORMO（ミロモ）",
+    "subtitle": "見えないストレスを見える化し、自然に楽しく解消するデジタルミラー",
+    "category": "設計・開発",
+    "description": "日本テレビR&DラボとパナソニックFUTURE LIFE FACTORYの協業プロジェクト（TONDEMO LIFE FACTORY）。コロナ禍での生活課題に対応するため、気づかないうちに蓄積するストレスを可視化し、解消を促進するデバイス。鏡の前に立つと「ミロモちゃん」というキャラクターが呼びかけ、ストレスが「ストレスモンスター」として可視化される。パナソニックの「デジタルヒューマン技術」を応用し、ココロの状態やカラダ負担を可視化・定量化。ストレス度合いに応じてモンスターの種類・数が変化し、ゲーム感覚でストレス解消エクササイズを促進する。",
+    "images": [
+      "/assets/images/projects/mirrormo.jpg"
+    ],
+    "awards": [],
+    "technologies": ["Kinect", "Unity", "画像解析", "インタラクティブ", "ゲーミフィケーション"],
+    "role": "設計・開発",
+    "year": "2020",
+    "links": {
+      "project": "https://panasonic.co.jp/design/flf/works/mirrormo/"
+    }
+  },
+  "yuragu": {
+    "title": "YURAGU（揺らぐ）",
+    "subtitle": "自然の揺らぎを感知して室内に反映させる照明体験",
+    "category": "設計・開発",
+    "description": "屋外の自然な「ゆらぎ」を感知して、家の中の様々なものに反映させるプロジェクト。木の枝や水面の揺らぎを感知し、室内照明に反映させることで、家の中にいながら自然の変化を感じられる空間を創出する。都市部の閉ざされた室内では外の環境変化に気づきにくいという課題に対し、自然の「ゆらぎ」をデジタルではなく自然の力を借りて表現することで、心地よい空間と自然との再接続を実現する照明体験デザイン。",
+    "images": [
+      "/assets/images/projects/yuragu.jpg"
+    ],
+    "awards": [],
+    "technologies": ["自然センシング", "照明制御", "インタラクティブ", "ESP32"],
+    "role": "設計・開発",
+    "year": "2023",
+    "links": {
+      "project": "https://panasonic.co.jp/design/flf/works/reconnect/yuragu/"
+    }
+  },
+  "tangible": {
+    "title": "TANGIBLE",
+    "subtitle": "電子マネーの残高をフィジカルに体感できるデバイス",
+    "category": "設計・開発",
+    "description": "あらゆるものがデジタル化され本来フィジカルに存在しているものを五感で感じ取らずとも生活できる未来において、電子マネーの残高をフィジカルに体感できるデバイスの提案。電子マネーの残金をデバイス自身が膨らむことで、デジタルなものの量を感覚的に知ることができる。交通系ICカード対応やスマートフォン搭載の交通系IC対応により、実際の残高に連動してデバイスが膨張する機構を実装。将来的には小型化してスマートフォンに貼付し、実際の財布のように機能することを構想した未来プロトタイピングプロジェクト。",
+    "images": [
+      "/assets/images/projects/tangible.jpg"
+    ],
+    "awards": [],
+    "technologies": ["IC読取技術", "機構設計", "Arduino", "プロトタイピング"],
+    "role": "設計・開発",
+    "year": "2023",
+    "links": {
+      "project": "https://panasonic.co.jp/design/flf/works/future_prototyping/tangible/"
     }
   }
 }
