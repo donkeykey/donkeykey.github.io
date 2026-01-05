@@ -361,8 +361,36 @@ body {
 }
 
 /* ===========================
-   Slide 7: 趣味・パーソナル
+   Slide 2: 趣味・パーソナル
    =========================== */
+.personal-info {
+    display: flex;
+    gap: var(--spacing-2xl);
+    justify-content: center;
+    margin-bottom: var(--spacing-2xl);
+    flex-wrap: wrap;
+}
+
+.personal-info-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-radius: 8px;
+    border: 1px solid var(--bg-tertiary);
+}
+
+.personal-icon {
+    font-size: 2rem;
+}
+
+.personal-info-item p {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
 .hobbies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

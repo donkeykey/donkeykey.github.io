@@ -44,7 +44,6 @@ function typeWriter(element, text, speed = 100) {
 function renderBasicInfo(basicInfo) {
     const nameEl = document.getElementById('profile-name');
     const titleEl = document.getElementById('profile-title');
-    const affiliationEl = document.getElementById('profile-affiliation');
     const socialEl = document.getElementById('profile-social');
 
     if (nameEl) {
@@ -53,9 +52,6 @@ function renderBasicInfo(basicInfo) {
     }
     if (titleEl) {
         titleEl.textContent = basicInfo.title;
-    }
-    if (affiliationEl) {
-        affiliationEl.textContent = basicInfo.affiliation;
     }
     if (socialEl) {
         socialEl.innerHTML = `
@@ -66,7 +62,40 @@ function renderBasicInfo(basicInfo) {
     }
 }
 
-// Slide 2: 経歴
+// Slide 2: 個人情報（年齢・家族）
+function renderPersonalInfo(basicInfo) {
+    const personalEl = document.getElementById('personal-info');
+    if (!personalEl) return;
+
+    personalEl.innerHTML = `
+        <div class="personal-info-item">
+            <span class="personal-icon">🎂</span>
+            <p>${basicInfo.age}</p>
+        </div>
+        <div class="personal-info-item">
+            <span class="personal-icon">👨‍👩‍👧</span>
+            <p>${basicInfo.family}</p>
+        </div>
+    `;
+}
+
+// Slide 2: 趣味・パーソナル
+function renderHobbies(hobbies) {
+    const gridEl = document.getElementById('hobbies-grid');
+    if (!gridEl) return;
+
+    const html = hobbies.map(hobby => `
+        <div class="hobby-card">
+            <div class="hobby-icon">${hobby.icon}</div>
+            <div class="hobby-title">${hobby.title}</div>
+            <div class="hobby-description">${hobby.description}</div>
+        </div>
+    `).join('');
+
+    gridEl.innerHTML = html;
+}
+
+// Slide 3: 経歴
 function renderCareer(career) {
     const timelineEl = document.getElementById('career-timeline');
     if (!timelineEl) return;
@@ -83,7 +112,7 @@ function renderCareer(career) {
     timelineEl.innerHTML = html;
 }
 
-// Slide 3-5: メインプロジェクト
+// Slide 4-6: メインプロジェクト
 function renderMainProject(project, elementId) {
     const el = document.getElementById(elementId);
     if (!el || !project) return;
@@ -102,8 +131,7 @@ function renderMainProject(project, elementId) {
 
     el.innerHTML = `
         <div class="project-image">
-            <img src="${project.images[0]}" alt="${project.title}" class="swiper-lazy">
-            <div class="swiper-lazy-preloader"></div>
+            <img src="${project.images[0]}" alt="${project.title}">
         </div>
         <h2 class="project-title">${project.title}</h2>
         <p class="project-subtitle">${project.subtitle}</p>
@@ -113,37 +141,20 @@ function renderMainProject(project, elementId) {
     `;
 }
 
-// Slide 6: その他プロジェクト
+// Slide 7: その他プロジェクト
 function renderOtherProjects(projects) {
     const containerEl = document.getElementById('other-projects');
     if (!containerEl) return;
 
     const html = projects.map(project => `
         <div class="other-project-card">
-            <img src="${project.images[0]}" alt="${project.title}" class="other-project-image swiper-lazy">
-            <div class="swiper-lazy-preloader"></div>
+            <img src="${project.images[0]}" alt="${project.title}" class="other-project-image">
             <div class="other-project-title">${project.title}</div>
             <div class="other-project-subtitle">${project.subtitle}</div>
         </div>
     `).join('');
 
     containerEl.innerHTML = html;
-}
-
-// Slide 7: 趣味・パーソナル
-function renderHobbies(hobbies) {
-    const gridEl = document.getElementById('hobbies-grid');
-    if (!gridEl) return;
-
-    const html = hobbies.map(hobby => `
-        <div class="hobby-card">
-            <div class="hobby-icon">${hobby.icon}</div>
-            <div class="hobby-title">${hobby.title}</div>
-            <div class="hobby-description">${hobby.description}</div>
-        </div>
-    `).join('');
-
-    gridEl.innerHTML = html;
 }
 
 // Slide 8: スキル・技術
@@ -185,21 +196,22 @@ async function init() {
     // Render Slide 1: 基本情報
     renderBasicInfo(profileData.basicInfo);
 
-    // Render Slide 2: 経歴
+    // Render Slide 2: 個人情報・趣味
+    renderPersonalInfo(profileData.basicInfo);
+    renderHobbies(profileData.hobbies);
+
+    // Render Slide 3: 経歴
     renderCareer(profileData.career);
 
-    // Render Slide 3-5: メインプロジェクト
+    // Render Slide 4-6: メインプロジェクト
     renderMainProject(projectsData.pago, 'project-pago');
     renderMainProject(projectsData['hyke-575'], 'project-hyke');
     renderMainProject(projectsData.remix, 'project-remix');
 
-    // Render Slide 6: その他プロジェクト (テクニカルディレクション)
+    // Render Slide 7: その他プロジェクト (テクニカルディレクション)
     const otherProjects = Object.values(projectsData)
         .filter(p => p.category === 'テクニカルディレクション');
     renderOtherProjects(otherProjects);
-
-    // Render Slide 7: 趣味
-    renderHobbies(profileData.hobbies);
 
     // Render Slide 8: スキル
     renderSkills(profileData.techStack);
