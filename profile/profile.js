@@ -73,6 +73,10 @@ function renderPersonalInfo(basicInfo) {
             <p>${basicInfo.age}</p>
         </div>
         <div class="personal-info-item">
+            <span class="personal-icon">📍</span>
+            <p>${basicInfo.birthplace}</p>
+        </div>
+        <div class="personal-info-item">
             <span class="personal-icon">👨‍👩‍👧</span>
             <p>${basicInfo.family}</p>
         </div>
