@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>川島大地 - プロフィール | クリエイティブエンジニア</title>
+    <meta name="description" content="川島大地の詳細プロフィール。経歴、プロジェクト、スキル、趣味を縦スクロールスライドで紹介。">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="川島大地 - プロフィールスライド">
+    <meta property="og:description" content="クリエイティブエンジニア / プロトタイプエンジニアとしての経歴、プロジェクト、スキルを紹介">
+    <meta property="og:url" content="https://kawashimadaichi.tokyo/profile/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://kawashimadaichi.tokyo/assets/images/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="川島大地 - プロフィールスライド">
+    <meta name="twitter:description" content="クリエイティブエンジニア / プロトタイプエンジニアとしての経歴、プロジェクト、スキルを紹介">
+    <meta name="twitter:image" content="https://kawashimadaichi.tokyo/assets/images/og-image.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/profile/profile.css">
+</head>
+<body>
+    <!-- Swiper Container -->
+    <div class="swiper profile-swiper">
+        <div class="swiper-wrapper">
+
+            <!-- Slide 1: 基本情報 -->
+            <div class="swiper-slide">
+                <section class="slide-content slide-hero">
+                    <div class="profile-portrait">
+                        <img src="/assets/images/profile/portrait-placeholder.svg" alt="川島大地" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                    </div>
+                    <h1 class="profile-name typing-text" id="profile-name"></h1>
+                    <p class="profile-title" id="profile-title"></p>
+                    <p class="profile-affiliation" id="profile-affiliation"></p>
+                    <div class="profile-social" id="profile-social"></div>
+                    <div class="scroll-indicator">
+                        <span>Scroll Down</span>
+                        <span class="arrow">↓</span>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Slide 2: 経歴 -->
+            <div class="swiper-slide">
+                <section class="slide-content slide-career">
+                    <h2 class="slide-title">Career</h2>
+                    <div class="career-timeline" id="career-timeline"></div>
+                </section>
+            </div>
+
+            <!-- Slide 3-5: メインプロジェクト（動的生成） -->
+            <div class="swiper-slide">
+                <section class="slide-content slide-project" id="project-pago"></section>
+            </div>
+
+            <div class="swiper-slide">
+                <section class="slide-content slide-project" id="project-hyke"></section>
+            </div>
+
+            <div class="swiper-slide">
+                <section class="slide-content slide-project" id="project-remix"></section>
+            </div>
+
+            <!-- Slide 6: その他プロジェクト -->
+            <div class="swiper-slide">
+                <section class="slide-content slide-other-projects">
+                    <h2 class="slide-title">Technical Direction</h2>
+                    <div class="other-projects-container" id="other-projects"></div>
+                </section>
+            </div>
+
+            <!-- Slide 7: 趣味・パーソナル -->
+            <div class="swiper-slide">
+                <section class="slide-content slide-hobbies">
+                    <h2 class="slide-title">Hobbies & Interests</h2>
+                    <div class="hobbies-grid" id="hobbies-grid"></div>
+                </section>
+            </div>
+
+            <!-- Slide 8: スキル・技術 -->
+            <div class="swiper-slide">
+                <section class="slide-content slide-skills">
+                    <h2 class="slide-title">Tech Stack</h2>
+                    <div class="skills-grid" id="skills-grid"></div>
+                </section>
+            </div>
+
+            <!-- Slide 9: トップページへ戻る -->
+            <div class="swiper-slide">
+                <section class="slide-content slide-footer">
+                    <h2 class="slide-title">Thank you!</h2>
+                    <p class="footer-text">もっと詳しく見たい方は...</p>
+                    <a href="/" class="btn-home">トップページへ戻る →</a>
+                    <p class="copyright">© 2024 Daichi Kawashima</p>
+                </section>
+            </div>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+    <!-- Custom JS -->
+    <script src="/profile/profile.js" defer></script>
+</body>
+</html>

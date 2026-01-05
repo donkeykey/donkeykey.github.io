@@ -1,0 +1,62 @@
+{
+  "basicInfo": {
+    "name": "川島 大地",
+    "nameEn": "Daichi Kawashima",
+    "title": "クリエイティブエンジニア / プロトタイプエンジニア",
+    "affiliation": "パナソニック FUTURE LIFE FACTORY",
+    "bio": "テクノロジーと創造性を横断し、アイディアをカタチにする。エンジニアとしてのバックグラウンドを活かし、テクノロジーとクリエイティブの領域を行ったり来たりしながら、アイディアをカタチにし、検証できるレベルでプロトタイピングしていくことを専門としている。",
+    "social": {
+      "twitter": "https://x.com/daichi000daichi",
+      "portfolio": "https://kawashimadaichi.tokyo",
+      "business": "https://manomono.net"
+    }
+  },
+  "career": [
+    {
+      "period": "2019年〜現在",
+      "company": "パナソニック株式会社 FUTURE LIFE FACTORY",
+      "position": "クリエイティブエンジニア / Creative Engineer",
+      "description": "先行開発チームにてプロトタイプ開発を担当。PA!GO、HYKE-575、リミックスなど革新的なプロダクトを設計・開発。"
+    },
+    {
+      "period": "2017年〜2019年",
+      "company": "株式会社バードマン",
+      "position": "クリエイティブエンジニア / Creative Engineer",
+      "description": "インタラクティブコンテンツ、体験型イベント、IoTデバイス開発を担当。"
+    },
+    {
+      "period": "2014年〜2017年",
+      "company": "ヤフー株式会社",
+      "position": "サーバエンジニア / Server Engineer",
+      "description": "大規模Webサービスのバックエンド開発・運用を担当。"
+    }
+  ],
+  "hobbies": [
+    {
+      "title": "ものづくり",
+      "description": "個人制作プロジェクトで電子工作、IoTデバイス、AI活用ツールなど幅広く制作。",
+      "icon": "🔧"
+    },
+    {
+      "title": "釣り",
+      "description": "週末は海や川で釣りを楽しむ。自然との対話を通じてリフレッシュ。",
+      "icon": "🎣"
+    },
+    {
+      "title": "音楽（ドラム演奏）",
+      "description": "ドラム歴15年。ライブハウスでのセッションも。",
+      "icon": "🥁"
+    },
+    {
+      "title": "推し（Kroiというバンド）",
+      "description": "Kroiの音楽とライブパフォーマンスに強く影響を受けている。",
+      "icon": "🎸"
+    }
+  ],
+  "techStack": {
+    "hardware": ["Raspberry Pi", "ESP32", "M5Stack", "Arduino"],
+    "software": ["Python", "Node.js", "JavaScript", "Unity", "Processing", "p5.js", "AWS", "Firebase"],
+    "fabrication": ["3Dプリンター", "レーザーカッター", "Fusion 360", "KiCad"],
+    "ai": ["ChatGPT", "Claude", "Gemini", "Stable Diffusion", "Ollama", "RAG構成", "LLMローカル推論"]
+  }
+}
