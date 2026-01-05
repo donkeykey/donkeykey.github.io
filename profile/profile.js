@@ -161,7 +161,23 @@ function renderOtherProjects(projects) {
     containerEl.innerHTML = html;
 }
 
-// Slide 8: スキル・技術
+// Slide 8: 個人プロジェクト
+function renderPersonalProjects(projects) {
+    const containerEl = document.getElementById('personal-projects');
+    if (!containerEl) return;
+
+    const html = projects.map(project => `
+        <div class="other-project-card">
+            <img src="${project.images[0]}" alt="${project.title}" class="other-project-image">
+            <div class="other-project-title">${project.title}</div>
+            <div class="other-project-subtitle">${project.subtitle}</div>
+        </div>
+    `).join('');
+
+    containerEl.innerHTML = html;
+}
+
+// Slide 9: スキル・技術
 function renderSkills(techStack) {
     const gridEl = document.getElementById('skills-grid');
     if (!gridEl) return;
@@ -218,7 +234,15 @@ async function init() {
         .filter(p => p.category === 'テクニカルディレクション');
     renderOtherProjects(otherProjects);
 
-    // Render Slide 8: スキル
+    // Render Slide 8: 個人プロジェクト
+    const personalProjects = [
+        projectsData.trendgpt,
+        projectsData.chameleon,
+        projectsData['e-otomo']
+    ].filter(p => p); // undefined を除外
+    renderPersonalProjects(personalProjects);
+
+    // Render Slide 9: スキル
     renderSkills(profileData.techStack);
 
     // Initialize Swiper after content is loaded
